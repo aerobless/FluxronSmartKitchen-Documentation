@@ -1,0 +1,30 @@
+\input{config/configuration}
+\input{config/commands}
+\input{config/standardtexts}
+ 
+\begin{document}
+
+%Intro-Teil
+\include{start/titlepage}
+\include{start/abstract}
+\include{start/managementsummary}
+
+%TODO: Selbststaendigkeitserklaerung als pdf unter start/erklaerung includen.
+%\includepdf[pages=-, pagecommand={},
+%scale=0.73, trim=80 210 80 80]{start/erklaerung}
+
+%TODO: Index auf Deutsch
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+
+%Hauptteil here
+
+\nocite{*}
+\bibliographystyle{IEEEtran}
+\bibliography{Fluxron}
+
+\input{appendix/abbreviations}
+
+\include{appendix/index}
+
+\end{document}
