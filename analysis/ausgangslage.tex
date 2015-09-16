@@ -8,17 +8,10 @@
 
 %TODO
 % Freistellen
-\begin{wrapfigure}{l}{0.4\textwidth}
-  \begin{center}
-  	\vspace{-20pt}
-	\includegraphics[scale=0.4]{analysis/res/einbaugeraete}
-	\caption{Induktionsherd}
-	\vspace{-40pt}
-  \end{center}
-\end{wrapfigure}
-
+\piccaption{Induktionsherd}
+\parpic{\includegraphics[scale=0.4]{analysis/res/einbaugeraete}}
 Die Firma Fluxron AG mit Sitz in Amriswil TG bietet induktive Heiz- und Energiesysteme für Grossküchen an. Die Produktpalette besteht aus verschiedenen Induktionsherden und Thermostatsystemen. Diese haben jeweils ein Bluetoothmodul eingebaut, welches auf ein CANopen-basiertes Protokoll zur Kommunikation setzt. Die Module liefern neben den Geräteeinstellungen auch Fehlercodes und Sensormesswerte via Blootooth.
-
+\picskip{0}
 Fluxron verkauft diese Induktionsgeräte an Servicefirmen, welche diese dann beim Endkunden, z.B. einem Restaurant, einbauen und installieren. Dabei, aber auch bei Wartungsarbeiten, setzen die Servicefirmen die bestehende Android Applikation \enquote{FLX Tool} zur Diagnose und zur Konfiguration ein.
 
 Neben den Servicefirmen, setzen auch die Mitarbeiter der Firma Fluxron die Androidapplikation bei internen Versuchen oder zur Ferndiagnose ein. Bei der Ferndiagnose wird eine Teamviewer-Verbindung auf das Smartphone oder den PC des Technikers aufgebaut. Über diese kann dann eine Diagnose mittels den Tools via Bluetooth erfolgen.
@@ -50,32 +43,18 @@ Nun kann man sich mit einem Gerät aus der Liste verbinden über in die Detailan
 \label{subsec:Weitere bestehende Software}
 \subsubsection{FLX Access}
 \label{subsubsec:FLX Access}
-\begin{wrapfigure}{l}{0.5\textwidth}
-  \begin{center}
-  	\vspace{-26pt}
-	\includegraphics[scale=0.5]{analysis/res/flxaccess}
-	\caption{FLX Access}
-	\vspace{-140pt}
-  \end{center}
-\end{wrapfigure}
-
+\piccaption{FLX Access}
+\parpic{\includegraphics[scale=0.5]{analysis/res/flxaccess}}
 Mit FLX Access stellt Fluxron ein Windows-Tool zum auslesen und setzen von gerätespezifischen Parametern bereit. Die Kommunikation erfolgt via Bluetooth. Zudem kann der Gerätestatus ausgelesen werden. 
 
-Dieses System ist besonders für die Entwicklungsphase von Geräten gedacht.%Wenn hier noch mehr Text kommt, dann vspace anpassen
-\vspace{100pt}
+Dieses System ist besonders für die Entwicklungsphase von Geräten gedacht.
+\picskip{0}
 \subsubsection{FLX Downloadtool}
 \label{subsubsec:FLX Downloadtool}
-\begin{wrapfigure}{l}{0.5\textwidth}
-  \begin{center}
-  	\vspace{-26pt}
-	\includegraphics[scale=0.35]{analysis/res/flxdltool}
-	\caption{FLX Downloadtool}
-	\vspace{-100pt}
-  \end{center}
-\end{wrapfigure}
 
+\piccaption{FLX Access}
+\parpic{\includegraphics[scale=0.35]{analysis/res/flxdltool}}
 Das FLX Downloadtool ermöglicht den Download der gesamten Konfiguration in eine Excel-Datei. In dieser können dan die Parameter eingestellt werden. Danach werden die Einstellungen über das Tool wieder auf das Gerät geladen.
 
 Eingesetzt wird dieses Programm für das Schreiben von kundenspezifischen Parametern auf mehrere Geräte.
-%Wenn hier noch mehr Text kommt, dann vspace anpassen
-\vspace{160pt}
+\picskip{0}
