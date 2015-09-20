@@ -3,12 +3,23 @@
 \section{Non Functional Requirements}
 \label{sec:Non Functional Requirements}
 
+\begin{itemize}
+\item Die Applikation soll bis zu 100 Fluxron Geräte verwalten können.
+\item Die Applikation soll modular aufgebaut sein, so dass zukünftige Erweiterungen leicht realisiert werden können.
+\item Der Code soll so dokumentiert werden dass eine Weiterentwicklung der Applikation durch die FLUXRON Solutions AG möglich ist.
+\item Die Applikation soll auf Android Geräten die bis zu 2 Jahre alt sind lauffähig sein.
+\item Sowohl Bluetooth Classic als auch Bluetooth 4.0 sollen von der Applikation unterstützt werden.
+\item Die Applikation soll so einfach bedienbar sein dass keine Schulung der Benutzer erforderlich ist.
+\item Die Applikation soll auch ohne bestehende Internet-Verbindung vollständig funktionsfähig sein.
+\end{itemize}
+
+
 \subsection{Anforderungen an Android-Version}
 \label{subsec:Non Functional Requirements}
-Aufgrund der alten Produktgeneration muss die App auf einer Android-Version laufen, welche klassische Bluetoothverbindungen unterstützt. Zudem sollte die App auch auf einer neuen Version von Android mit Bluetooth 4.0 LE betrieben werden können.
+Aufgrund der alten Produktgeneration muss die App auf einer Android-Version laufen, welche klassische Bluetoothverbindungen unterstützt. Zudem sollte die App auch auf einer neuen Version von Android mit Bluetooth 4.0 \ac{LE} betrieben werden können.
 
 Bluetooth 4.0 unterstützt sowohl klassische Bluetoothverbindungen, als auch die neuen Low Energy Verbindungen. Die klassichen Verbindungen sind rückwärtskompatibel mit den Vorgängerwersionen.\cite{bt_standard}
 
-Android unterstützt Bluetooth 4.0 (inlusive LE) ab der API-Version 4.3\cite{bt_android}. Dies ist somit die minimal nötige Version, um die Kompatibilität zu gewährleisten.
+Android unterstützt Bluetooth 4.0 (inklusive \ac{LE}) ab der API-Version 4.3\cite{bt_android}. Dies ist somit die minimal nötige Version, um die Kompatibilität zu gewährleisten.
 
 Mit der Auswahl der Version 4.3 (Android JellyBean) können somit mehr als 50\% der momentan im Umlauf \cite{android_distribution} befindlichen Geräte unterstützt werden.
