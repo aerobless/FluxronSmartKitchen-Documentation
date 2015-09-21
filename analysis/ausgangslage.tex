@@ -6,8 +6,6 @@
 \subsection{Anwendungsumfeld}
 \label{subsec:Anwendungsumfeld}
 
-%TODO
-% Freistellen
 \piccaption{Induktionsherd}
 \parpic{\includegraphics[scale=0.4]{analysis/res/einbaugeraete}}
 Die Firma Fluxron AG mit Sitz in Amriswil TG bietet induktive Heiz- und Energiesysteme für Grossküchen an. Die Produktpalette besteht aus verschiedenen Induktionsherden und Thermostatsystemen. Diese haben jeweils ein Bluetoothmodul eingebaut, welches auf ein CANopen-basiertes Protokoll zur Kommunikation setzt. Die Module liefern neben den Geräteeinstellungen auch Fehlercodes und Sensormesswerte via Blootooth.
@@ -20,20 +18,27 @@ Neben den Servicefirmen, setzen auch die Mitarbeiter der Firma Fluxron die Andro
 \label{subsec:Bestehende Smartphone-Applikation}
 In Eigenentwicklung wurde bei Fluxron bereits eine einfache Android-Applikation entwickelt. Diese unterstützt bereits das Suchen von Geräten, sowie das Lesen und Schreiben von Parametern. Da diese App allerdings immer nur ein Gerät gleichzeitig bedienen kann und die Benutzerinteraktion daher sehr Zeitaufwändig ist, soll im Rahmen dieses Projektes eine neue, übersichtlichere Androidapplikation entstehen. In den nachfolgenden Abschnitten sind die Funktionen dieser Applikation aus funktioneller Sicht aufgelistet.
 
-%TODO Screenshots
-
 \subsubsection{Installation und Konfiguration}
 \label{subsubsec:Installation und Konfiguration}
 Die App kann ist öffentlich im Google Play Store erhältlich. Nach dem Download muss der Benutzer aber ein Kennwort eingeben, um Zugang zur App und den Gerätefunktionen zu erhalten.
 
 \subsubsection{Verbindungsaufbau zu einem Gerät}
 \label{subsubsec:Verbindungsaufbau zu einem Gerät}
+\centerline{
+\hpic{\includegraphics[scale=0.3]{analysis/res/SelectDevice}}
+}
+\caption{Geräteauswahl FLX Tool}
 Um eine Verbindung mit einem Gerät herzustellen, muss dieses zuerst über einen Suchlauf gefunden werden. Der Suchlauf zeigt alle momentan aktiven Geräte in einer Liste mit ihrer Device-ID an. In der Liste sind neben den aktiven Geräten auch alle Geräte aufgelistet, welche schon einmal mit der App verbunden waren.
 
 Danach kann man sich mit einem Gerät aus der Liste verbinden um mit dem Gerät zu interagieren.
 
 \subsubsection{Statusansicht}
 \label{subsubsec:Statusansicht}
+\centerline{
+\hpic{\includegraphics[scale=0.3]{analysis/res/ShowStatusThermostat}}
+\hpic{\includegraphics[scale=0.3]{analysis/res/ShowStatusInduction}}
+}
+\caption{Statusansicht für Thermostat und Induktionsherd}
 Wenn ein Gerät verbunden ist, kann der Benutzer über die entsprechende Schaltfläche zum Gerätetyp zu der Statusübersicht des Gerätes gelangen. Auf der Statusübersicht kann der Benutzer u.a. folgende Informationen auslesen:
 \begin{itemize}
 \item Statuscode
@@ -62,6 +67,7 @@ Neben den Zähler kann ein Fehlerlog eingesehen werden, welches die letzten Zehn
 \item Die Geräte sind nur mit der ID sichtbar, dies macht die Orientierung in einer Grossküche mit einem dutzend Geräten schwierig
 \item Wenn ein nicht verbundenes Gerät eine Fehlermeldung absetzt, wird diese nicht empfangen
 \item Typ der verbundenen Geräte wird zwar erkannt, die Benutzeroberfläche bietet aber immer noch alle Gerätetypen an
+\item Wenn keine Geräte vorhanden sind, oder gefunden werden, hat die App keinen Nutzen für den User.
 \end{itemize}
 
 \subsection{Weitere bestehende Software}
