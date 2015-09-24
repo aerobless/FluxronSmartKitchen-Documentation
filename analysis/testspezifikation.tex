@@ -125,3 +125,62 @@
 \textbf{Erwartetes Ergebnis} & Ein sicherheitsrelevanter Parameter eines Geräts wurden verändert.\\
 \end{tabularx}
 \end{table}
+
+\subsection{Kennwortschutz}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{FR}. Nur autorisierte Personen können die Applikation verwenden.\\
+\textbf{Vorbedingungen} & Die Applikation ist installiert.\\
+\textbf{Durchführung} & \begin{enumerate}
+\item Die Applikation starten
+\item Passwort eingeben
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Die Applikation lässt sich nach Eingabe des Passworts normal verwenden.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Kennwortschutz mit falschem Kennwort}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{FR}. Nur autorisierte Personen können die Applikation verwenden.\\
+\textbf{Vorbedingungen} & Die Applikation ist installiert.\\
+\textbf{Durchführung} & \begin{enumerate}
+\item Die Applikation starten
+\item Falsches Passwort eingeben
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Die Applikation zeigt eine Fehlermeldung und erlaubt eine erneute Eingabe des Passworts.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Suchlauf mit Gruppierung}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{FR}. Beim Suchlauf werden die gefundenen Geräte gruppiert dargestellt.\\
+\textbf{Vorbedingungen} & Die Applikation ist installiert und gestartet.\\
+\textbf{Durchführung} & Ein Geräte-Suchlauf durchführen\\
+\textbf{Erwartetes Ergebnis} & Die gefundenen Geräte werden übersichtlich gruppiert dargestellt.\\
+\end{tabularx}
+\end{table}
+
+%TODO
+%muss noch angepasst werden wenn genauere Details verfügbar sind wie das Sharing funktionieren soll
+\subsection{Austausch von Küchenlayouts}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{FR}. Bereits initialisierte Küchen-Konfigurationen können mit anderen Benutzern ausgetauscht werden. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Ein Android Handy mit einer bereits initialisierten Küche
+\item Ein Android Handy ohne initialisierte Küchen
+\end{itemize} \\
+\textbf{Durchführung} & \begin{enumerate}
+\item Auf einem Gerät die bestehende Küche öffnen
+\item Die Küche mittels "Share-Button" teilen
+%TODO
+%Klären ob E-Mail Adresse, Benutzer-ID oder teilen via Bluetooth? 
+\item Auf dem zweiten Gerät kommt eine Benachrichtigung dass eine neue Küchenkonfiguration verfügbar ist
+\item Diese Konfiguration akzeptieren und öffnen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Die Küchenkonfiguration vom einen Gerät ist nun auch auf dem zweiten Gerät verfügbar.\\
+\end{tabularx}
+\end{table}
+
