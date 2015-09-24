@@ -162,8 +162,7 @@
 \end{tabularx}
 \end{table}
 
-%TODO
-%muss noch angepasst werden wenn genauere Details verfügbar sind wie das Sharing funktionieren soll
+%TODO muss noch angepasst werden wenn genauere Details verfügbar sind wie das Sharing funktionieren soll
 \subsection{Austausch von Küchenlayouts}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
@@ -174,13 +173,62 @@
 \end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Auf einem Gerät die bestehende Küche öffnen
-\item Die Küche mittels "Share-Button" teilen
-%TODO
-%Klären ob E-Mail Adresse, Benutzer-ID oder teilen via Bluetooth? 
+\item Die Küche mittels \enquote{Share-Button} teilen
+%TODO Klären ob E-Mail Adresse, Benutzer-ID oder teilen via Bluetooth? 
 \item Auf dem zweiten Gerät kommt eine Benachrichtigung dass eine neue Küchenkonfiguration verfügbar ist
 \item Diese Konfiguration akzeptieren und öffnen
 \end{enumerate} \\
 \textbf{Erwartetes Ergebnis} & Die Küchenkonfiguration vom einen Gerät ist nun auch auf dem zweiten Gerät verfügbar.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Küche mit grosser Anzahl Geräte (50)}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll zwischen 30-50 Fluxron Geräte problemlos verwalten können. \\
+\textbf{Vorbedingungen} & Die Applikation ist gestartet und es können via Suchlauf beliebig viele simulierte Geräte gefunden werden.\\
+\textbf{Durchführung} & \begin{enumerate}
+\item Eine neue Küche initialisieren
+\item 24 Geräte via Suchlauf finden und im Küchenlayout platzieren
+\item Ein 25. Gerät hinzufügen und sich dessen Position/Name merke
+\item Die restlichen 25 Geräte hinzufügen, so dass in der Küche jetzt total 50 Geräte vorhanden sind
+\item die Küchen speichern
+\item Gerät 25 in der Küche finden und dessen Status ansehen
+\item Ein Parameter von Gerät 25 anpassen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Auch bei 50 Geräten sind auf einem spezifischen Gerät in der Küche noch alle Interaktionen möglich. Gerät 25 kann normal manipuliert werden.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Küche mit grosser Anzahl Geräte (150)}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll mit Einschränkungen bis zu 150 Fluxron Geräte verwalten können.\\
+\textbf{Vorbedingungen} & Die Applikation ist gestartet und es können via Suchlauf beliebig viele simulierte Geräte gefunden werden.\\
+\textbf{Durchführung} & \begin{enumerate}
+\item Eine neue Küche initialisieren
+\item 150 Geräte via Suchlauf finden und im Küchenlayout platzieren
+\item Prüfen dass der Status der Geräte sichtbar ist
+\item Prüfen dass einzelne Geräte noch auswählbar sind und deren Parameter verändert werden können
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Bei 150 Geräten sind mit Einschränkungen %TODO Einschränkungen genauer spzeifizieren
+zu rechnen. Die Applikation hat aber keine Performance-Probleme und es können alle kritischen Funktionen verwendet werden.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Bluetooth Unterstützung}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation kann sowohl mit Bluetooth Classic als auch Bluetooth 4.0 Geräten kommunizieren. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Aktives Fluxron Blutooth Classic Gerät
+\item Aktives Fluxron Blutooth 4.0 Gerät
+\end{itemize}\\
+\textbf{Durchführung} & \begin{enumerate}
+\item Eine neue Küche initialisieren und Suchlauf starten
+\item Die beiden Geräte hinzufügen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Der Status beider Geräte ist in der Küche sichtbar.\\
 \end{tabularx}
 \end{table}
 
