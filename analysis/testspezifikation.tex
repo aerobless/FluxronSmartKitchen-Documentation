@@ -52,3 +52,76 @@
 \textbf{Erwartetes Ergebnis} & Die gelöschte Küche ist nicht mehr in der Applikation sichtbar.\\
 \end{tabularx}
 \end{table}
+
+\subsection{Protokoll auslesen}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von Use Case B. Der Benutzer kann das Protokoll eines Geräts auslesen. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Eine initialisierte Küche ist bereits in der Applikation vorhanden
+\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\end{itemize} \\
+\textbf{Durchführung} & \begin{enumerate}
+\item Die bestehende Küche öffnen
+\item Ein Gerät auswählen und dessen Protokollspeicher auslesen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Das Protokoll eines in der Küche vorhandenen Geräts wurde gelesen.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Geräteparameter ändern}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von Use Case B2. Der Benutzer kann die Parameter eines Geräts verändern. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Eine initialisierte Küche ist bereits in der Applikation vorhanden
+\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\end{itemize} \\
+\textbf{Durchführung} & \begin{enumerate}
+\item Die bestehende Küche öffnen
+\item Ein Gerät auswählen und die Parameterliste dieses Geräts anzeigen
+\item Einen Parameter wählen und einen neuen, gültigen Wert eingeben
+\item Speichern
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Die Parameter eines Geräts wurden verändert.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Geräteparameter ändern mit Validierung}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von Use Case B2. Der Benutzer kann die Parameter eines Geräts verändern. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Eine initialisierte Küche ist bereits in der Applikation vorhanden
+\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\end{itemize} \\
+\textbf{Durchführung} & \begin{enumerate}
+\item Die bestehende Küche öffnen
+\item Ein Gerät auswählen und die Parameterliste dieses Geräts anzeigen
+\item Einen Parameter wählen und einen neuen, ungültigen Wert eingeben
+\item Speichern
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Der Parameter akzeptiert den ungültigen Wert nicht, es wird eine entsprechende Fehlermeldung dargestellt und die Änderung wird nicht gespeichert.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Kritische Geräteparameter ändern}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von Use Case C. Mitarbeiter von Fluxron können sicherheitsrelevante Geräteparameter verändern. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Eine initialisierte Küche ist bereits in der Applikation vorhanden
+\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\end{itemize} \\
+\textbf{Durchführung} & \begin{enumerate}
+\item Die Applikation starten
+\item Sich als Mitarbeiter der Fluxron identifizieren
+\item Die bestehende Küche öffnen
+\item Ein Gerät auswählen und dessen sicherheitsrelevanten Parameter anpassen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Ein sicherheitsrelevanter Parameter eines Geräts wurden verändert.\\
+\end{tabularx}
+\end{table}
