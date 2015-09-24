@@ -1,0 +1,54 @@
+\section{Testspezifikation}
+\label{sec:Testspezifikation}
+
+\subsection{Küche initialisieren}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von Use Case A. Der Benutzer erfasst die Lage der Geräte in der Küche. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Geräte mit Bluetooth-Verbindung sind aktiv
+\end{itemize} \\
+\textbf{Durchführung} & \begin{enumerate}
+\item Eine neue Küche erstellen und Namen vergeben
+\item Das Layout der Küche nachstellen
+\item Den Geräte-Suchlauf starten
+\item Die gefundenen Geräte im Küchenlayout platzieren
+\item Die Küchenerstellung abschliessen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & In der Applikation ist die neu erstellte Küche sichtbar und die platzierten Geräte zeigen ihren Status an.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Küche anpassen}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von Use Case A. Der Benutzer kann die Initialisierung der Küche jederzeit wiederaufnehmen.\\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Eine initialisierte Küche ist bereits in der Applikation vorhanden
+\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\end{itemize} \\
+\textbf{Durchführung} & \begin{enumerate}
+\item Die bestehende Küche öffnen
+\item Ein Gerät auswählen und entfernen
+\item Den Geräte-Suchlauf starten
+\item Das vorher entfernte Gerät soll gefunden werden und wieder zur Küche hinzugefügt werden
+\item Die Küchenerstellung abschliessen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Die bestehende Küche hat nach der Durchführung dieses Tests die gleichen Geräte konfiguriert wie vorher.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Küche löschen}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Eine bereits erstelle Küche kann gelöscht werden.\\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Eine initialisierte Küche ist bereits in der Applikation vorhanden
+\end{itemize} \\
+\textbf{Durchführung} & Eine bestehende Küche auswählen und löschen. \\
+\textbf{Erwartetes Ergebnis} & Die gelöschte Küche ist nicht mehr in der Applikation sichtbar.\\
+\end{tabularx}
+\end{table}
