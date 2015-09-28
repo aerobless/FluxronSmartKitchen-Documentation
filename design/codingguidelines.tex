@@ -1,0 +1,20 @@
+\section{Code Style Guidelines}
+\label{sec:Code Style Guidelines}
+
+Um die Zusammenarbeit mit mehreren Personen zu regeln, verwenden wir den folgende Code Style Guide: \url{https://source.android.com/source/code-style.html#java-language-rules}.
+
+Zur Vereinfachung einer späteren Veröffentlichung achten wir von Anfang an auf die Android Launch Checkliste: \url{http://developer.android.com/distribute/tools/launch-checklist.html}.
+
+\subsection{Einschränkungen}
+Die folgenden Empfehlungen aus dem Code Style Guide werden wir nicht übernehmen:
+
+\begin{itemize}
+\item \textbf{Jedes File hat zuoberst ein Copyright Statement.} \\ Der gesamte Code erhält eine Lizenz welche zentral abgelegt wird. Bei jedem File ein solches Statement einzufügen ist unnötig und redundant.
+\item \textbf{Statische Variablen beginnen mit s. Nicht-öffentliche, nicht-statische Variablen beginne mit m. Alle andern werden klein geschrieben.} \\ Diese Konvention ist unnötig da man diese Informationen problemlos auch dem Code entnehmen kann. Moderne IDEs wie Android Studio unterstützen einem dabei zusätzlich durch farbliches Hervorheben. Für dieses Projekt werden Variablennamen generell klein geschrieben.
+\end{itemize}
+
+\section{UX Guidelines}
+\label{sec:UX Guidelines}
+
+Bei der Entwicklung des User Interfaces nutzen wir den Material Design Style Guide:
+\url{https://developer.android.com/design/index.html}. Dieser Guide ist eigentlich für Android 5.0 ausgelegt, unsere Applikation muss jedoch von Android 4.3 an lauffähig sein. Daher müssen einige Einschränkungen, z.B. bei der Verwendung von Animationen in Kauf genommen werden.
