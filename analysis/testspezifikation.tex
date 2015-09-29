@@ -7,22 +7,30 @@ Zur Überprüfung der Applikationsfunktionalität werden Systemtests sowohl vom 
 Mit folgender Tabelle wird gezeigt das alle \ac{FR}, \ac{NFR} und Use Cases durch Systemtests abgedeckt sind.
 
 \begin{table}[H]
-\begin{tabularx}{\textwidth}{ l | X}
-\textbf{Anforderung}& \textbf{abgedeckt durch}\\ \hline
-Use Case A & ST1: Küche initialisieren \newline ST2: Küche anpassen \newline ST3: Küche löschen \\ \hline
-Use Case B & ST4: Protokoll auslesen \\ \hline
-Use Case B2 & ST5: Geräteparameter ändern \newline ST6: Geräteparameter ändern mit Validierung \\ \hline
-Use Case C & ST7: Kritische Geräteparameter ändern \\ \hline
-Use Case C & ST7: Kritische Geräteparameter ändern \\ \hline
-\ac{FR}1 & ST8: Kennwortschutz \newline ST9: Kennwortschutz mit falschem Kennwort \\ \hline
-\ac{FR}2 & ST10: Suchlauf mit Gruppierung \\ \hline
-\ac{FR} & ST11: Austausch von Küchenlayouts \\ \hline
-\ac{NFR} & ST12: Küche mit grosser Anzahl Geräte (50) \\ \hline
-\ac{NFR} & ST13: Küche mit grosser Anzahl Geräte (150) \\ \hline
-\ac{NFR} & ST14: Bluetooth Unterstützung \\ 
+\begin{tabularx}{\textwidth}{ l | l | l | X}
+\textbf{\acs{UC}}& \textbf{\acs{FR}} & \textbf{\acs{NFR}} &\textbf{Systemtest}\\ \hline
+A  & 3, 4 & & ST1: Küche initialisieren \\ \hline
+A  & 5 & & ST2: Küche anpassen \\ \hline
+A  &  & & ST3: Küche löschen \\ \hline
+B  & 6, 11 & &  ST4: Protokoll auslesen \\ \hline
+B2 & 6, 8, 9 & &  ST5: Geräteparameter ändern \\ \hline
+B2 & 10 & & ST6: Geräteparameter ändern mit Validierung \\ \hline
+C  &  & &  ST7: Kritische Geräteparameter ändern \\ \hline
+   & 1 & &  ST8: Kennwortschutz  \\ \hline
+   & 1 & & ST9: Kennwortschutz mit falschem Kennwort \\ \hline
+A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
+   & 15 & &  ST11: Austausch von Küchenlayouts \\ \hline
+   & & 1 &  ST12: Küche mit grosser Anzahl Geräte (50) \\ \hline
+   & & 1 &  ST13: Küche mit grosser Anzahl Geräte (150) \\ \hline
+   & & 5 &  ST14: Bluetooth Unterstützung \\ 
 \end{tabularx}
 \caption{Systemtest Abdeckung}
 \end{table}
+
+\subparagraph{Nicht abgedeckte Anforderungen}
+\begin{itemize}
+\item \ac{FR}16-17 (3. Priorität) fehlen in der Systemtest Abdeckungs Tabelle da sie sich nur konzeptionell auf das Projekt auswirken und nicht getestet werden können.
+\end{itemize}
 
 \subsection{ST1: Küche initialisieren}
 \begin{table}[H]
