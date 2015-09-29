@@ -1,7 +1,30 @@
-\section{Testspezifikation}
-\label{sec:Testspezifikation}
+\pagebreak
+\section{Systemtest Spezifikation}
+\label{sec:Systemtest Spezifikation}
+Zur Überprüfung der Applikationsfunktionalität werden Systemtests sowohl vom Entwicklerteam als auch von der \fluxron{} durchgeführt.
 
-\subsection{Küche initialisieren}
+\subsection{Systemtest Abdeckung}
+Mit folgender Tabelle wird gezeigt das alle \ac{FR}, \ac{NFR} und Use Cases durch Systemtests abgedeckt sind.
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{ l | X}
+\textbf{Anforderung}& \textbf{abgedeckt durch}\\ \hline
+Use Case A & ST1: Küche initialisieren \newline ST2: Küche anpassen \newline ST3: Küche löschen \\ \hline
+Use Case B & ST4: Protokoll auslesen \\ \hline
+Use Case B2 & ST5: Geräteparameter ändern \newline ST6: Geräteparameter ändern mit Validierung \\ \hline
+Use Case C & ST7: Kritische Geräteparameter ändern \\ \hline
+Use Case C & ST7: Kritische Geräteparameter ändern \\ \hline
+\ac{FR}1 & ST8: Kennwortschutz \newline ST9: Kennwortschutz mit falschem Kennwort \\ \hline
+\ac{FR}2 & ST10: Suchlauf mit Gruppierung \\ \hline
+\ac{FR} & ST11: Austausch von Küchenlayouts \\ \hline
+\ac{NFR} & ST12: Küche mit grosser Anzahl Geräte (50) \\ \hline
+\ac{NFR} & ST13: Küche mit grosser Anzahl Geräte (150) \\ \hline
+\ac{NFR} & ST14: Bluetooth Unterstützung \\ 
+\end{tabularx}
+\caption{Systemtest Abdeckung}
+\end{table}
+
+\subsection{ST1: Küche initialisieren}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von Use Case A. Der Benutzer erfasst die Lage der Geräte in der Küche. \\
@@ -20,7 +43,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Küche anpassen}
+\subsection{ST2: Küche anpassen}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von Use Case A. Der Benutzer kann die Initialisierung der Küche jederzeit wiederaufnehmen.\\
@@ -40,10 +63,10 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Küche löschen}
+\subsection{ST3: Küche löschen}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Eine bereits erstelle Küche kann gelöscht werden.\\
+\textbf{Testziel} & Erfüllen von Use Case A. Eine bereits erstelle Küche kann gelöscht werden.\\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Eine initialisierte Küche ist bereits in der Applikation vorhanden
@@ -53,7 +76,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Protokoll auslesen}
+\subsection{ST4: Protokoll auslesen}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von Use Case B. Der Benutzer kann das Protokoll eines Geräts auslesen. \\
@@ -70,7 +93,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Geräteparameter ändern}
+\subsection{ST5: Geräteparameter ändern}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von Use Case B2. Der Benutzer kann die Parameter eines Geräts verändern. \\
@@ -89,7 +112,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Geräteparameter ändern mit Validierung}
+\subsection{ST6: Geräteparameter ändern mit Validierung}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von Use Case B2. Der Benutzer kann die Parameter eines Geräts verändern. \\
@@ -108,7 +131,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Kritische Geräteparameter ändern}
+\subsection{ST7: Kritische Geräteparameter ändern}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von Use Case C. Mitarbeiter von Fluxron können sicherheitsrelevante Geräteparameter verändern. \\
@@ -126,7 +149,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Kennwortschutz}
+\subsection{ST8: Kennwortschutz}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{FR}. Nur autorisierte Personen können die Applikation verwenden.\\
@@ -139,7 +162,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Kennwortschutz mit falschem Kennwort}
+\subsection{ST9: Kennwortschutz mit falschem Kennwort}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{FR}. Nur autorisierte Personen können die Applikation verwenden.\\
@@ -152,7 +175,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Suchlauf mit Gruppierung}
+\subsection{ST10: Suchlauf mit Gruppierung}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{FR}. Beim Suchlauf werden die gefundenen Geräte gruppiert dargestellt.\\
@@ -163,7 +186,7 @@
 \end{table}
 
 %TODO muss noch angepasst werden wenn genauere Details verfügbar sind wie das Sharing funktionieren soll
-\subsection{Austausch von Küchenlayouts}
+\subsection{ST11: Austausch von Küchenlayouts}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{FR}. Bereits initialisierte Küchen-Konfigurationen können mit anderen Benutzern ausgetauscht werden. \\
@@ -182,7 +205,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Küche mit grosser Anzahl Geräte (50)}
+\subsection{ST12: Küche mit grosser Anzahl Geräte (50)}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll zwischen 30-50 Fluxron Geräte problemlos verwalten können. \\
@@ -200,7 +223,7 @@
 \end{tabularx}
 \end{table}
 
-\subsection{Küche mit grosser Anzahl Geräte (150)}
+\subsection{ST13: Küche mit grosser Anzahl Geräte (150)}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll mit Einschränkungen bis zu 150 Fluxron Geräte verwalten können.\\
@@ -216,7 +239,7 @@ zu rechnen. Die Applikation hat aber keine Performance-Probleme und es können a
 \end{tabularx}
 \end{table}
 
-\subsection{Bluetooth Unterstützung}
+\subsection{ST14: Bluetooth Unterstützung}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation kann sowohl mit Bluetooth Classic als auch Bluetooth 4.0 Geräten kommunizieren. \\
