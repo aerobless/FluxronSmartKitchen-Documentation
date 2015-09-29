@@ -22,7 +22,8 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
    & 15 & &  ST11: Austausch von Küchenlayouts \\ \hline
    & & 1 &  ST12: Küche mit grosser Anzahl Geräte (50) \\ \hline
    & & 1 &  ST13: Küche mit grosser Anzahl Geräte (150) \\ \hline
-   & & 5 &  ST14: Bluetooth Unterstützung \\ 
+   & & 5 &  ST14: Bluetooth Unterstützung \\ \hline
+   & & 7 &  ST15: Keine Netzwerkkonnektivität \\
 \end{tabularx}
 \caption{Systemtest Abdeckung}
 \end{table}
@@ -30,6 +31,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \subparagraph{Nicht abgedeckte Anforderungen}
 \begin{itemize}
 \item \ac{FR}16-17 (3. Priorität) fehlen in der Systemtest Abdeckungs Tabelle da sie sich nur konzeptionell auf das Projekt auswirken und nicht getestet werden können.
+\item \ac{NFR}2-6 sind nicht durch Systemtests überprüfbar.
 \end{itemize}
 
 \subsection{ST1: Küche initialisieren}
@@ -161,7 +163,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \subsection{ST8: Kennwortschutz}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{FR}. Nur autorisierte Personen können die Applikation verwenden.\\
+\textbf{Testziel} & Erfüllen von \ac{FR}1. Nur autorisierte Personen können die Applikation verwenden.\\
 \textbf{Vorbedingungen} & Die Applikation ist installiert.\\
 \textbf{Durchführung} & \begin{enumerate}
 \item Die Applikation starten
@@ -174,7 +176,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \subsection{ST9: Kennwortschutz mit falschem Kennwort}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{FR}. Nur autorisierte Personen können die Applikation verwenden.\\
+\textbf{Testziel} & Erfüllen von \ac{FR}1. Nur autorisierte Personen können die Applikation verwenden.\\
 \textbf{Vorbedingungen} & Die Applikation ist installiert.\\
 \textbf{Durchführung} & \begin{enumerate}
 \item Die Applikation starten
@@ -187,7 +189,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \subsection{ST10: Suchlauf mit Gruppierung}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{FR}. Beim Suchlauf werden die gefundenen Geräte gruppiert dargestellt.\\
+\textbf{Testziel} & Erfüllen von \ac{FR}2. Beim Suchlauf werden die gefundenen Geräte gruppiert dargestellt.\\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Es sind mindestens 3 Geräte mit aktiver Bluetooth Verbindung vorhanden
@@ -201,7 +203,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \subsection{ST11: Austausch von Küchenlayouts}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{FR}. Bereits initialisierte Küchen-Konfigurationen können mit anderen Benutzern ausgetauscht werden. \\
+\textbf{Testziel} & Erfüllen von \ac{FR}15. Bereits initialisierte Küchen Konfigurationen können mit anderen Benutzern ausgetauscht werden. \\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Ein Android Handy mit einer bereits initialisierten Küche
 \item Ein Android Handy ohne initialisierte Küchen
@@ -220,7 +222,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \subsection{ST12: Küche mit grosser Anzahl Geräte (50)}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll zwischen 30-50 Fluxron Geräte problemlos verwalten können. \\
+\textbf{Testziel} & Erfüllen von \ac{NFR}1. Die Applikation soll zwischen 30-50 Fluxron Geräte problemlos verwalten können. \\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Es sind 50 Geräte (simuliert oder real) mit aktiver Bluetooth Verbindung vorhanden
@@ -241,7 +243,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \subsection{ST13: Küche mit grosser Anzahl Geräte (150)}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll mit Einschränkungen bis zu 150 Fluxron Geräte verwalten können.\\
+\textbf{Testziel} & Erfüllen von \ac{NFR}1. Die Applikation soll mit Einschränkungen bis zu 150 Fluxron Geräte verwalten können.\\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Es sind 50 Geräte (simuliert oder real) mit aktiver Bluetooth Verbindung vorhanden
@@ -260,7 +262,7 @@ zu rechnen. Die Applikation hat aber keine Performance-Probleme und es können a
 \subsection{ST14: Bluetooth Unterstützung}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation kann sowohl mit Bluetooth Classic als auch Bluetooth 4.0 Geräten kommunizieren. \\
+\textbf{Testziel} & Erfüllen von \ac{NFR}5. Die Applikation kann sowohl mit Bluetooth Classic als auch Bluetooth 4.0 Geräten kommunizieren. \\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Aktives Fluxron Blutooth Classic Gerät
 \item Aktives Fluxron Blutooth 4.0 Gerät
@@ -270,6 +272,26 @@ zu rechnen. Die Applikation hat aber keine Performance-Probleme und es können a
 \item Die beiden Geräte hinzufügen
 \end{enumerate} \\
 \textbf{Erwartetes Ergebnis} & Der Status beider Geräte ist in der Küche sichtbar.\\
+\end{tabularx}
+\end{table}
+
+\subsection{ST15: Keine Netzwerkkonnektivität}
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{r X }
+\textbf{Testziel} & Erfüllen von \ac{NFR}7. Die Applikation soll auch ohne aktive Internetverbindung voll funktionsfähig sein. \\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item WLAN, GSM/UMTS/LTE deaktiviert
+\item Mindestens ein Gerät mit aktiver Bluetooth Verbindung vorhanden
+\end{itemize}\\
+\textbf{Durchführung} & \begin{enumerate}
+\item Eine neue Küche initialisieren und Suchlauf starten
+\item Das gefundene Gerät hinzufügen
+\item Den Status des Geräts abrufen
+\item Das Protokoll des Geräts abrufen
+\item Die Küche löschen
+\end{enumerate} \\
+\textbf{Erwartetes Ergebnis} & Alle Aktionen sind möglich. Die Applikation verhält sich normal.\\
 \end{tabularx}
 \end{table}
 
