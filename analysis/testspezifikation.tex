@@ -38,7 +38,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \textbf{Testziel} & Erfüllen von Use Case A. Der Benutzer erfasst die Lage der Geräte in der Küche. \\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
-\item Geräte mit Bluetooth-Verbindung sind aktiv
+\item Es sind mindestens 2 Geräte mit aktiver Bluetooth Verbindung vorhanden
 \end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Eine neue Küche erstellen und Namen vergeben
@@ -58,7 +58,8 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Eine initialisierte Küche ist bereits in der Applikation vorhanden
-\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\item Die Küche enthält mindestens 2 Geräte
+\item Die verwendeten Geräte haben eine aktive Bluetooth Verbindung
 \end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Die bestehende Küche öffnen
@@ -91,7 +92,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Eine initialisierte Küche ist bereits in der Applikation vorhanden
-\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\item Die Küche enthält mindestens ein Gerät welches via Bluetooth erreichbar ist
 \end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Die bestehende Küche öffnen
@@ -108,7 +109,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Eine initialisierte Küche ist bereits in der Applikation vorhanden
-\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\item Die Küche enthält mindestens ein Gerät welches via Bluetooth erreichbar ist
 \end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Die bestehende Küche öffnen
@@ -127,7 +128,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Applikation gestartet
 \item Eine initialisierte Küche ist bereits in der Applikation vorhanden
-\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\item Die Küche enthält mindestens ein Gerät welches via Bluetooth erreichbar ist
 \end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Die bestehende Küche öffnen
@@ -145,7 +146,7 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \textbf{Testziel} & Erfüllen von Use Case C. Mitarbeiter von Fluxron können sicherheitsrelevante Geräteparameter verändern. \\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Eine initialisierte Küche ist bereits in der Applikation vorhanden
-\item Die in der initialisierten Küche verwendeten Geräte sind via Bluetooth erreichbar
+\item Die Küche enthält mindestens ein Gerät welches via Bluetooth erreichbar ist
 \end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Die Applikation starten
@@ -187,7 +188,10 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{FR}. Beim Suchlauf werden die gefundenen Geräte gruppiert dargestellt.\\
-\textbf{Vorbedingungen} & Die Applikation ist installiert und gestartet.\\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Es sind mindestens 3 Geräte mit aktiver Bluetooth Verbindung vorhanden
+\end{itemize} \\
 \textbf{Durchführung} & Ein Geräte-Suchlauf durchführen\\
 \textbf{Erwartetes Ergebnis} & Die gefundenen Geräte werden übersichtlich gruppiert dargestellt.\\
 \end{tabularx}
@@ -217,7 +221,10 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll zwischen 30-50 Fluxron Geräte problemlos verwalten können. \\
-\textbf{Vorbedingungen} & Die Applikation ist gestartet und es können via Suchlauf beliebig viele simulierte Geräte gefunden werden.\\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Es sind 50 Geräte (simuliert oder real) mit aktiver Bluetooth Verbindung vorhanden
+\end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Eine neue Küche initialisieren
 \item 24 Geräte via Suchlauf finden und im Küchenlayout platzieren
@@ -235,7 +242,10 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
 \textbf{Testziel} & Erfüllen von \ac{NFR}. Die Applikation soll mit Einschränkungen bis zu 150 Fluxron Geräte verwalten können.\\
-\textbf{Vorbedingungen} & Die Applikation ist gestartet und es können via Suchlauf beliebig viele simulierte Geräte gefunden werden.\\
+\textbf{Vorbedingungen} & \begin{itemize}
+\item Applikation gestartet
+\item Es sind 50 Geräte (simuliert oder real) mit aktiver Bluetooth Verbindung vorhanden
+\end{itemize} \\
 \textbf{Durchführung} & \begin{enumerate}
 \item Eine neue Küche initialisieren
 \item 150 Geräte via Suchlauf finden und im Küchenlayout platzieren
