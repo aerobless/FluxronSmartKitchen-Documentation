@@ -1,0 +1,50 @@
+\section{Evaluation von Libraries}
+\label{sec:Evaluation von Libraries}
+Zur Unterstützung der gewählten Architektur sind Libraries zu bevorzugen. In diesem Kapitel sind die Evaluationsergebnisse beschrieben.
+
+\subsection{Event Bus Library}
+Es stehen folgende zwei Libraries zur Auswahl:
+\begin{enumerate}
+\item Otto - An event bus by Square
+\item Greenrobot EventBus
+\end{enumerate}
+Diese sollen nun nachfolgend nach den durch die Architektur vorgegebenen Kriterien bewertet werden.
+
+\begin{table}[H]
+\begin{tabular}{|p{8cm}|c|c|}
+ \hline 
+\textbf{Kriterium} & \textbf{1: Otto} & \textbf{2: GreenRobot} 
+\\ \hline
+
+Instanzierung von mehreren Buses & x & x
+\\ \hline
+
+Ausführung in eigenem Thread & (x) & x
+\\ \hline
+
+Ausführung in \ac{UI}-Thread & x & x
+\\ \hline
+
+Ausführungsthread pro Subscriber wählbar &   & x
+\\ \hline
+
+Neustart des Bus & x & x
+\\ \hline
+
+Caching der letzten Events &   & x
+\\ \hline
+
+Asynchrone Events &   & x
+\\ \hline
+
+Eventproduzenten & x & 
+\\ \hline
+
+\end{tabular}
+\caption{Bewertung Event Bus Libraries}
+\end{table}
+
+\subsubsection{Bewertung und Fazit}
+Mit den nicht vorhandenen Kriterien \enquote{Ausführungsthread pro Subscriber wählbar} und \enquote{Asynchrone Event} fehlen der Library \enquote{Otto} zwei unverzichtbare Features. Da das einzige Feature, welches von GreenRobot nicht unterstützt wird, die Eventproduzenten sind (diese können durch Request/Response einfach ersetzt werden), kann der GreenRobot EventBus eingesetzt werden.
+
+GreenRobot EventBus ist unter der Apache License \cite{apache_license} Version 2.0  lizenziert. Diese erfordert lediglich eine Kopie der Lizenz mit der gelieferten Software. Da keine Modifikationen an der eigentlichen Library gemacht wird, ist dies die einzige Einschränkung.
