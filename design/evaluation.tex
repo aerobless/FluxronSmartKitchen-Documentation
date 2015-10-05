@@ -48,3 +48,40 @@ Eventproduzenten & x &
 Mit den nicht vorhandenen Kriterien \enquote{Ausführungsthread pro Subscriber wählbar} und \enquote{Asynchrone Event} fehlen der Library \enquote{Otto} zwei unverzichtbare Features. Da das einzige Feature, welches von GreenRobot nicht unterstützt wird, die Eventproduzenten sind (diese können durch Request/Response einfach ersetzt werden), kann der GreenRobot EventBus eingesetzt werden.
 
 GreenRobot EventBus ist unter der Apache License \cite{apache_license} Version 2.0  lizenziert. Diese erfordert lediglich eine Kopie der Lizenz mit der gelieferten Software. Da keine Modifikationen an der eigentlichen Library gemacht wird, ist dies die einzige Einschränkung.
+
+\subsection{Lokaler Speicher für die Küchendaten und Settings}
+Zur lokalen Speicherung der Daten soll eine Datenbankbibliothek eingesetzt werden. Da die Küchendaten immer als ganze Küche geladen werden, soll eine dokumentbasierte Datenbank zum einsatz kommen. Momentan sind die folgenden Libararies aktuell und sind daher in Betracht zu ziehen:
+\begin{enumerate}
+\item Oracle BerkeleyDB
+\item Couchbase Lite
+\item UnQLite
+\end{enumerate}
+
+In der folgenden Tabelle sind die wichtigsten Kriterien mit einer Bewertung aufgelistet.
+
+\begin{table}[H]
+\begin{tabular}{|p{5cm}|c|c|c|}
+ \hline 
+\textbf{Kriterium} & \textbf{1: BerkeleyDB} & \textbf{2: Couchbase} & \textbf{2: UnQLite}
+\\ \hline
+
+Android API 18 Support & x & x & (x)
+\\ \hline
+Komerzielle Nutzung    &   & x & x
+\\ \hline
+Queries                & x & x & x
+\\ \hline
+Pagination             & x & x & x
+\\ \hline
+Replication            & x & x & 
+\\ \hline
+Dokumentationsqualität & + & + & -
+\\ \hline
+\end{tabular}
+\caption{Bewertung dokumentbasierte Datenbank für Android}
+\end{table}
+
+\subsubsection{Bewertung und Fazit}
+Da BerkeleyDB von Oracle für kommerzielle Nutzungszwecke eine von Oracle genehmigte Einzellizenz benötigt, kann diese Library nicht verwendet werden. Die unzureichende Dokumentation und fehlende Replikationsfeatures machen UnQLite ebenfalls zu einem ungeeignetem Kandidaten.
+
+Damit fällt die Wahl auf Couchbase Lite. Diese Bibliothek bietet auch im Hinblick auf die optionalen \ac{NFR} eine solide Basis.
