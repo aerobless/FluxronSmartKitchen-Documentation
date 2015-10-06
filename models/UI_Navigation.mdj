@@ -1744,13 +1744,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 688,
-									"top": 376,
+									"left": 680,
+									"top": 343,
 									"width": 133.71337890625,
 									"height": 13,
 									"autoResize": false,
-									"alpha": 1.8925474811914187,
-									"distance": 15.811388300841896,
+									"alpha": -1.4056481899208588,
+									"distance": 18.24828759089466,
 									"hostEdge": {
 										"$ref": "AAAAAAFQNlharucAvGI="
 									},
@@ -3487,13 +3487,13 @@
 									"showShadow": true,
 									"containerChangeable": false,
 									"containerExtending": false,
-									"left": 697,
-									"top": 235,
+									"left": 696,
+									"top": 264,
 									"width": 104.08251953125,
 									"height": 13,
 									"autoResize": false,
-									"alpha": 1.5707963267948966,
-									"distance": 15,
+									"alpha": -1.6421030809202524,
+									"distance": 14.035668847618199,
 									"hostEdge": {
 										"$ref": "AAAAAAFQNl+NX+hZfso="
 									},
@@ -3622,6 +3622,147 @@
 							"autoResize": false,
 							"text": "Eine App kann aus jedem Zustand durch den Benutzer mit Betriebssystemfunktionen beendet werden. Ein \"final state\" wird daher hier nicht aufgeführt.",
 							"wordWrap": true
+						},
+						{
+							"_type": "UMLTransitionView",
+							"_id": "AAAAAAFQPfwUwRWbCuU=",
+							"_parent": {
+								"$ref": "AAAAAAFQNkhVWuXaTRs="
+							},
+							"model": {
+								"$ref": "AAAAAAFQPfwUwRWahn4="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAFQPfwUwRWcyUU=",
+									"_parent": {
+										"$ref": "AAAAAAFQPfwUwRWbCuU="
+									},
+									"model": {
+										"$ref": "AAAAAAFQPfwUwRWahn4="
+									},
+									"visible": true,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 630,
+									"top": 198,
+									"width": 96.10986328125,
+									"height": 13,
+									"autoResize": false,
+									"alpha": -1.0714495148812102,
+									"distance": 62.64982043070834,
+									"hostEdge": {
+										"$ref": "AAAAAAFQPfwUwRWbCuU="
+									},
+									"edgePosition": 1,
+									"underline": false,
+									"text": "Küche verlassen",
+									"horizontalAlignment": 2,
+									"verticalAlignment": 5
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAFQPfwUwRWdaS4=",
+									"_parent": {
+										"$ref": "AAAAAAFQPfwUwRWbCuU="
+									},
+									"model": {
+										"$ref": "AAAAAAFQPfwUwRWahn4="
+									},
+									"visible": null,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 594,
+									"top": 228,
+									"width": 0,
+									"height": 13,
+									"autoResize": false,
+									"alpha": 1.5707963267948966,
+									"distance": 30,
+									"hostEdge": {
+										"$ref": "AAAAAAFQPfwUwRWbCuU="
+									},
+									"edgePosition": 1,
+									"underline": false,
+									"horizontalAlignment": 2,
+									"verticalAlignment": 5
+								},
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAFQPfwUwRWe1Iw=",
+									"_parent": {
+										"$ref": "AAAAAAFQPfwUwRWbCuU="
+									},
+									"model": {
+										"$ref": "AAAAAAFQPfwUwRWahn4="
+									},
+									"visible": false,
+									"enabled": true,
+									"lineColor": "#000000",
+									"fillColor": "#ffffff",
+									"fontColor": "#000000",
+									"font": "Arial;13;0",
+									"showShadow": true,
+									"containerChangeable": false,
+									"containerExtending": false,
+									"left": 638,
+									"top": 229,
+									"width": 0,
+									"height": 13,
+									"autoResize": false,
+									"alpha": -1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAFQPfwUwRWbCuU="
+									},
+									"edgePosition": 1,
+									"underline": false,
+									"horizontalAlignment": 2,
+									"verticalAlignment": 5
+								}
+							],
+							"visible": true,
+							"enabled": true,
+							"lineColor": "#000000",
+							"fillColor": "#ffffff",
+							"fontColor": "#000000",
+							"font": "Arial;13;0",
+							"showShadow": true,
+							"containerChangeable": false,
+							"containerExtending": false,
+							"head": {
+								"$ref": "AAAAAAFQNkrIAOXyTUU="
+							},
+							"tail": {
+								"$ref": "AAAAAAFQNlTeqeYzowU="
+							},
+							"lineStyle": 0,
+							"points": "624:296;624:175",
+							"stereotypeDisplay": "label",
+							"showVisibility": true,
+							"showProperty": true,
+							"nameLabel": {
+								"$ref": "AAAAAAFQPfwUwRWcyUU="
+							},
+							"stereotypeLabel": {
+								"$ref": "AAAAAAFQPfwUwRWdaS4="
+							},
+							"propertyLabel": {
+								"$ref": "AAAAAAFQPfwUwRWe1Iw="
+							}
 						}
 					]
 				}
@@ -4107,6 +4248,33 @@
 							},
 							"visibility": "public",
 							"kind": "external"
+						},
+						{
+							"_type": "UMLTransition",
+							"_id": "AAAAAAFQPfwUwRWahn4=",
+							"_parent": {
+								"$ref": "AAAAAAFQNkhVWuXZxH0="
+							},
+							"source": {
+								"$ref": "AAAAAAFQNlTeqeYysE4="
+							},
+							"target": {
+								"$ref": "AAAAAAFQNkrIAOXxMRg="
+							},
+							"visibility": "public",
+							"kind": "external",
+							"triggers": [
+								{
+									"_type": "UMLEvent",
+									"_id": "AAAAAAFQPfxwqhWzuyQ=",
+									"_parent": {
+										"$ref": "AAAAAAFQPfwUwRWahn4="
+									},
+									"name": "Küche verlassen",
+									"visibility": "public",
+									"kind": "anyReceive"
+								}
+							]
 						}
 					]
 				}
