@@ -1,0 +1,15 @@
+\chapter{Infrastruktur}
+\label{Infrastruktur}
+
+\section{Entwicklungsumgebung}
+Als \ac{IDE} wurde für dieses Projekt Android Studio 1.4 eingesetzt. Android Studio basiert auf IntelliJ und hat Ende 2014 die \enquote{Eclipse Android Development Tools} als Standard \ac{IDE} für Android Projekte abgelöst.\cite{android_studio_stable}
+
+Für die Versionsverwaltung wurde Git mit einem Projekt Repository der \ac{HSR} (\url{git.hsr.ch}) verwendet. Lokal wurde der grafische Git-Client SourceTree benutzt.
+
+Um Continuous Integration zu ermöglichen haben wir zusätzlich auf einem \ac{VPS} der \ac{HSR} einen Jenkins Build-Server eingerichtet. Der Build-Server prüft mittels Polling ob neue Commits vorhanden sind und kompiliert gegebenenfalls jeweils eine neue Version der Applikation. So wird sichergestellt das eine Änderung nicht nur lokal kompiliert sondern überall. Zudem bietet der Build-Server die Möglichkeit die jeweils aktuellste Version der Applikation an Tester zu verteilen.
+
+\section{Projektmanagement}
+
+
+
+\section{Testgeräte}
