@@ -8,7 +8,7 @@ Entsprechend zu den Meilensteinen wurden die folgenden Arbeitspakete geplant:
 \begin{tabularx}{\textwidth}{ c | l | X }
 \textbf{Nr} & \textbf{Name} & \textbf{Inhalt} \\ \hline
 01 & Ausgangslage & Kick-Off und Einarbeitung \\ \hline
-02 & Infrastruktur aufsetzen & VPS in Betrieb nehmen, Redmine installieren, Code und Dokumentation Repositories konfigurieren, Backup-Strategie erstellen. \\ \hline
+02 & Infrastruktur aufsetzen & \acs{VPS} in Betrieb nehmen, Redmine installieren, Code und Dokumentation Repositories konfigurieren, Backup-Strategie erstellen. \\ \hline
 03 & Use Cases & Use Cases und User Stories anhand der Aufgabenstellung entwerfen und dokumentieren.\\ \hline
 04 & Anforderungsspezifikation & \ac{FR} und \ac{NFR} dokumentieren.\\ \hline
 05 & Testspezifikation & Aufgrund der \ac{FR} und \ac{NFR} eine Testspezifikation entwerfen.\\ \hline
@@ -23,8 +23,8 @@ Entsprechend zu den Meilensteinen wurden die folgenden Arbeitspakete geplant:
 \begin{tabularx}{\textwidth}{ c | l | X }
 \textbf{Nr} & \textbf{Name} & \textbf{Inhalt} \\ \hline
 10 & Arbeitspakete & Issues in Redmine erfassen und Arbeitspakete dokumentieren. \\ \hline
-11 & Projektplan & Ein Projektplan erstellen die Arbeitspakete in einen zeitlichen Kontext bringt.\\ \hline
-12 & Risikomanagement & Mögliche Risiken in Erfahrung bringen und dokumentieren.\\
+11 & Projektplan & Ein Projektplan erstellen der die Arbeitspakete in einen zeitlichen Kontext bringt.\\ \hline
+12 & Risikomanagement & Potentielle Risiken in Erfahrung bringen und dokumentieren.\\
 \end{tabularx}
 \caption{Arbeitspaket Projektmanagement}
 \end{table}
@@ -38,7 +38,7 @@ Entsprechend zu den Meilensteinen wurden die folgenden Arbeitspakete geplant:
 22 & Evaluation Libraries & Libraries zur Unterstützung der Architektur evaluieren.\\ \hline
 23 & Nebenläufigkeitskonzept & Konzept zur Handhabung von Nebenläufigkeiten ausarbeiten.\\ \hline
 24 & UI Designstudie & Konzept für das Benutzerinterface entwerfen.\\ \hline
-25 & Architekturprototyp & Implementation des Architekturprototypen.\\ 
+25 & Architekturprototyp & Applikationsstruktur und Layers aufbauen. Eventbus einrichten. Via Bluetooth Werte auf dem Testgerät abfragen.\\ 
 \end{tabularx}
 \caption{Arbeitspaket Design}
 \end{table}
@@ -47,11 +47,12 @@ Entsprechend zu den Meilensteinen wurden die folgenden Arbeitspakete geplant:
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{ c | l | X }
 \textbf{Nr} & \textbf{Name} & \textbf{Inhalt} \\ \hline
-30 & Implementation 1 & Erste Implementations-Iteration. \\ \hline
-31 & Implementation 2 & Zweite Implementations-Iteration.\\ \hline
-32 & Implementation 3 & Dritte Implementations-Iteration. \\ \hline
-33 & Implementation 3 & Dritte Implementations-Iteration. 75\% der Features sind implementiert. \\ \hline
-34 & Implementation 4 & Vierte Implementations-Iteration. Alle Features sind implementiert. \\ 
+30 & Implementation 0 & Grundlayout für alle Activities. Layout Küchenliste. EDS Files einlesen und parsen. Fotofunktion für \enquote{Küche erstellen}. DeviceManager verwaltet Geräte.\\ \hline
+31 & Implementation 1 & Grundlayout Küchenübersicht. Ankommende Nachrichten interpretieren. Checksummen Prüfung von Nachrichten. Thumbnails von Bildern laden. Code Generator für Parameter.\\ \hline
+32 & Implementation 2 & Device Orbs platzieren und skalieren. Bluetooth Verbindungen cachen. Küchenbereich hinzufügen und speichern. Device Discovery UI. Geräte validieren.\\ \hline
+33 & Implementation 3 & 75\% der Features sind implementiert. Device Activity mit Tabs. Konsistentes Navigationsdesign. Werte auf Gerät ändern können. Automatisiertes Pairing. Parameter zyklisch aktualisieren. \\ \hline
+34 & Implementation 4 & Parameter in Device Ansicht darstellen. UI animieren. Layouts für Device Usage, Errors und Status. Custom Control zur Darstellung der Temperaturbar.\\ \hline
+35 & Implementation 5 & Alle Features sind implementiert. Klassenerkennung bei Geräten. Schaltflächen stylen. Fixtexte konsequent im Ressourcen File hinterlegen. Error-Handling für Geräte Fehler. Prozentzahlen berechnen für Device Usage.\\
 \end{tabularx}
 \caption{Arbeitspaket Implementation}
 \end{table}
