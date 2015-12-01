@@ -14,7 +14,7 @@
 %scale=0.73, trim=80 210 80 80]{start/erklaerung}
 
 %TODO: Index auf Deutsch
-\addcontentsline{toc}{chapter}{Table of Contents}
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
 \tableofcontents
 
 %Hauptteil here
@@ -30,6 +30,16 @@
 \bibliography{Fluxron}
 
 \input{appendix/abbreviations}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 
 \include{appendix/index}
 

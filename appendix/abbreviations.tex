@@ -1,9 +1,9 @@
-
-% \acs prints the longform the first time, after that the short
-% using \ac always prints the shortform
+% \ac takes the longform first, after that always shortform (default)
+% \acs always prints the shortform
+% \acl always takes the longform without mentioning the shortform
+% more info: http://ctan.mirrorcatalogs.com/macros/latex/contrib/acronym/acronym.pdf
    
-\chapter*{List der Abkürzungen}\addcontentsline{toc}{chapter}{List of
-Abbreviations}
+\chapter*{Abkürzungsverzeichnis}\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
 \begin{acronym}[SPARC] % [] should contain the longest acronym
     \acro{API}{Application Programming Interface}
     \acro{CI}{Continuous Integration} 
