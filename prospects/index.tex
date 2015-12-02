@@ -1,2 +1,32 @@
 \chapter{Ausblick}
 \label{chap:Ausblick}
+
+\section{Weiterentwicklungsmöglichkeiten}
+\label{sec:Weiterentwicklungsmöglichkeiten}
+
+\subsection{Internet- / Cloudanbindung}
+\label{subsec:Internetanbindung}
+
+Da die Anwendung typischerweise von Angestellten einer Servicefirma genutzt wird, ist die aktuelle Möglichkeit, Küchen via E-Mail auszutauschen nicht langfristig praktikabel. Daher wird eine Internetanbindung der App zusätzlichen Nutzen verleihen. Die Firmen könnten damit die erfassten Küchen an alle Mitarbeiter verteilen und müssten sich nicht mehr um eine Datensicherung der einzelnen Geräte kümmern. Zudem wäre die Verwaltung aller Küchen einer Servicefirma in einem Webportal denkbar.
+
+Aber nicht nur für die Servicefirmen hätte eine solche internet- bzw. cloubasierte Lösung Vorteile. Auch die Firma Fluxron könnte von dieser profitieren. Es könnten zusätzliche Einnahmen mit dem Vermieten des Cloudservers an die Servicefirmen erzielt werden.
+
+Eine solche Anbindung ist mit der von uns gewählten Applikationsarchitektur problemlos möglich. Dabei kann einerseits die Datenbank (Couchbase Lite) mit einem Cloud-Backend verbunden werden. Dies ist von Couchbase bereits im Rahmen von Merge-Replikation unterstützt und ist damit mit geringem Aufwand möglich.
+
+Mit etwas mehr Entwicklungsaufwand könnte aber auch eine komplett neue Komponente zur Internetanbindung and den Daten-EventBus angehängt werden. Diese würde dann die empfangenen Meldungen an ein Cloud-Backend weiterleiten und damit theoretisch sogar eine Echtzeitanbindung ermöglichen.
+
+\subsection{Erstellen eines Geräteabbilds}
+\label{subsec:WeiterleitenVonFehlern}
+
+Ähnlich der momentanen Exportmöglichkeit für Küchen, wäre eine Erweiterung der App denkbar, welche es erlaubt, ein Abbild eines Gerätes zu erstellen. Dieses Geräteabbild könnte die Fehlerhistorie, Nutzungsstatistiken und alle Parameter (mit Werten) des Gerätes enthalten. Danach könnte das exportierte Abbild an die Herstellerfirma gesendet werden, um eine Fehlerdiagnose zu machen.
+
+Neben dem Export eines Geräteabbildes wäre natürlich auch der Import eines Geräteabbildes von Nutzen. So könnten Mitarbeiter der Firma Fluxron Konfigurationen vor Ort vom Handy auf mehrere Geräte überspielen oder die Konfiguration an eine Servicefirma weiterleiten, welche dann die Einstellungen auf die beim Kunden installierten Geräte übertragen kann.
+
+\subsection{Erhebung von Nutzungsprotokollen}
+\label{subsec:Nutzungsprotokolle}
+
+Verbindet man die Cloudanbindung (\ref{subsec:Internetanbindung}) und die Erstellung von Geräteabbildern (\ref{subsec:WeiterleitenVonFehlern}) wäre auch eine Erhebung von Nutzungsprotokollen der Geräte möglich. Damit kann die Firma die Leistung der Geräte dem Kundenbedarf anpassen und optimieren.
+
+Ausserdem könnten auch die Servicefirmen von einer solchen Erhebung profitieren. Sie können so einfacher Probleme diagnostizieren und Support für ihre Kunden anbieten. Häufig bauen die Servicefirmen die Fluxron-Geräte in eigene Küchenkombinationen ein, welche dann weiterverkauft werden. Mittels der Nutzungsstatistik kann so der Marktbedarf besser eingeschätzt werden.
+
+Ein weiterer Nutzen der Statistiken wäre es, Vorhersagen über mögliche nahende Probleme eines Gerätes machen zu können. So könnten die Geräte ausgetauscht oder repariert werden, bevor die   Probleme im laufenden Betrieb auftreten.
