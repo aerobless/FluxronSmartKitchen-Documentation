@@ -3,42 +3,47 @@
 \section{Mockups}
 \label{sec:Mockups}
 
-\begin{wrapfigure}[8]{r}{6cm}
-	\includegraphics[page=1,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
-	\caption{Mockup Startbildschirm}
-    \label{abb:mockStartScreen}
-\end{wrapfigure}
-
 \subsection{Startbildschirm}
 \label{subsec:Startbildschirm}
+
+\begin{wrapfigure}[8]{r}{6cm}
+	\begin{center}
+		\includegraphics[page=1,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
+		\caption{Mockup Startbildschirm}
+	    \label{abb:mockStartScreen}
+	\end{center}
+\end{wrapfigure}
 
 Der Startbildschirm enthält ein Suchfeld zur einfachen Suche einer Küche nach dem Namen. Darunter werden die Küchen mit ihrem Namen, der Beschreibung und mit der Anzahl Geräte aufgelistet. 
 
 Der Benutzer kann nun eine Küche durch Antippen öffnen, oder mittels dem \ac{FAB} eine neue Küche hinzufügen.
 
+\WFclear
 \vspace{3cm}
 
 \subsection{Küchenerstellung}
 \label{subsec:Küchenerstellung}
 
-\begin{wrapfigure}[8]{r}{6cm}
-	\includegraphics[page=2,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
-	\caption{Mockup Küchenerstellung}
-    \label{abb:mockCreateKitchen}
+\begin{wrapfigure}[14]{r}{6cm}
+	\begin{center}
+		\includegraphics[page=2,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
+		\caption{Mockup Küchenerstellung}
+	    \label{abb:mockCreateKitchen}
+	\end{center}
 \end{wrapfigure}
 
 Bei der Küchenerstellung gibt der Benutzer einen Namen für die Küche an. Zudem kann der Benutzer, wenn er möchte, noch eine Beschreibung für diese Küche eingeben.
 
-Zusätzlich sollte der Benutzer auch noch ein Foto von der Küche machen. Damit kann er die Küche später einfacher wiedererkennen.
-
-Der Küchenname und das Bild müssen zwingend erfasst werden, die Beschreibung ist nicht erforderlich.
+Zusätzlich sollte der Benutzer auch noch ein Foto von der Küche machen. Damit kann er die Küche später einfacher wiedererkennen. Küchenname und Bild müssen zwingend erfasst werden, die Beschreibung ist nicht erforderlich.
 
 Durch Antippen des \enquote{Create}-Buttons wird die Küche erfasst und der Benutzer auf die Küchenansicht umgeleitet.
+
+\WFclear
 
 \subsection{Küchenbereich mit aktivem Suchlauf}
 \label{subsec:Küchenbereich mit aktivem Suchlauf}
 
-\begin{wrapfigure}[8]{r}{6cm}
+\begin{wrapfigure}[12]{r}{6cm}
 	\includegraphics[page=4,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
 	\caption{Mockup Küchenansicht}
     \label{abb:mockKitchenView}
@@ -50,16 +55,20 @@ Durch Antippen eines Gerätes kann dieses nach Rückfrage gelöscht werden.
 
 Die Geräteliste enthält alle Geräte, welche beim Suchlauf gefunden wurden, oder bereits in der Küche erfasst wurden.
 
+\WFclear
+
 \subsection{Gerätestatus}
 \label{subsec:Gerätestatus}
 
-\begin{wrapfigure}[8]{r}{6cm}
-	\includegraphics[page=5,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
-	\caption{Mockup Gerätestatus}
-	\label{abb:mockDeviceDetail}
+\begin{wrapfigure}{r}{6cm}
+	\begin{center}
+		\includegraphics[page=5,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
+		\caption{Mockup Gerätestatus}
+		\label{abb:mockDeviceDetail}
+	\end{center}
 \end{wrapfigure}
 
-Die Statusansicht für ein Gerät besteht aus Tabs, zwischen denen der Benutzer mittels Swiping wechseln kann.
+Die Statusansicht für ein Gerät besteht aus Tabs, zwischen denen der Benutzer mittels Swiping wechseln kann. Für jeden Gerätetyp braucht es hier eine eigene Ansicht, es sind für jede Art von Gerät andere Parameter und Werte relevant.
 
 \begin{itemize}
   \item Statusübersicht mit Sensorwerten
@@ -67,3 +76,19 @@ Die Statusansicht für ein Gerät besteht aus Tabs, zwischen denen der Benutzer 
   \item Fehlerhistorie mit letzten 10 Fehlercodes
   \item Einstellungsseite mit Konfigurationsparametern
 \end{itemize}
+
+\vspace{6cm}
+\WFclear
+
+\subsection{Geräteparameter}
+\label{subsec:Geräteparameter}
+
+\begin{wrapfigure}[5]{r}{6cm}
+	\begin{center}
+		\includegraphics[page=6,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
+		\caption{Mockup Geräteparameter}
+		\label{abb:mockDeviceParams}
+	\end{center}
+\end{wrapfigure}
+
+Die Parameteransicht zeigt eine Liste aller veränderbaren Konfigurationseinstellungen an. Der Benutzer kann die Parameter ändern oder zurücksetzen.
