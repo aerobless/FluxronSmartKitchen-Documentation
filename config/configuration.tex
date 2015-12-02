@@ -4,11 +4,13 @@
 	ngerman] % english, hyphenation etc.
 	{scrreprt} % Report (KOMA-Script)
 
+\usepackage[font=small,labelfont=bf]{caption}
+
 \usepackage[T1]{fontenc} % Font family encoding: 8 Bit
 \usepackage[utf8]{inputenc} % Encoding in the created document: UTF-8
 \usepackage{lmodern} % Font family
 \usepackage{wrapfig}
-\usepackage{picins}
+
 \usepackage{csquotes}
 \usepackage[babel]{microtype} % Automatische Grauwertverbesserung
 \usepackage[ngerman]{babel} % warning that option english is not loaded yet
@@ -47,6 +49,7 @@
 \usepackage{float} % own floating objects (\newfloat, \floatname)
 
 \usepackage{hyperref} % linking to refs and URLs (\ref, \url, \autoref,
+
 % \nameref)
 %rename the output for an \autoref{chap:XXX} from lowercase chapter to Chapter
 % and also for Section and Subsection
@@ -65,6 +68,7 @@
     % work better with KOMAscript)
 
 \usepackage{enumitem} %Continue enumeration
+\setlist{noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=0pt, labelindent=0cm, labelwidth=\wd1, itemindent=*, labelsep=\dimexpr0.6cm-\wd1}
 
 % global formatting
 \onehalfspacing % 1.5x line spacing
@@ -97,6 +101,15 @@
     keywordstyle=\color{pblue},
     stringstyle=\color{pred},
 }
+
+\makeatletter
+\def\clearfloats {
+\@@par
+\ifnum\@@parshape=\z@ \let\WF@pspars\@empty \fi % reset `parshape'
+\global\advance\c@WF@wrappedlines-\prevgraf \prevgraf\z@
+\ifnum\c@WF@wrappedlines<\tw@ \WF@finale \fi
+}
+\makeatother
 
 % Standard Listing
 \lstset{
