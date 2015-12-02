@@ -83,7 +83,7 @@ Die Statusansicht für ein Gerät besteht aus Tabs, zwischen denen der Benutzer 
 \subsection{Geräteparameter}
 \label{subsec:Geräteparameter}
 
-\begin{wrapfigure}[5]{r}{6cm}
+\begin{wrapfigure}{r}{6cm}
 	\begin{center}
 		\includegraphics[page=6,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
 		\caption{Mockup Geräteparameter}
@@ -92,3 +92,46 @@ Die Statusansicht für ein Gerät besteht aus Tabs, zwischen denen der Benutzer 
 \end{wrapfigure}
 
 Die Parameteransicht zeigt eine Liste aller veränderbaren Konfigurationseinstellungen an. Der Benutzer kann die Parameter ändern oder zurücksetzen.
+
+Falls ein Parameter nicht geschrieben werden kann wird eine Fehlermeldung ausgegeben.
+
+Diese Ansicht ist ebenfalls für jeden Gerätetypen unterschiedlich, so haben z.B. Thermostaten mehrere Konfigurationsprofile, die alle in dieser Ansicht bearbeitet werden können.
+
+\WFclear
+\vspace{2cm}
+
+\subsection{Nutzungsstatistik}
+\label{subsec:Nutzungsstatistik}
+
+\begin{wrapfigure}{r}{6cm}
+	\begin{center}
+		\includegraphics[page=7,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
+		\caption{Mockup Nutzungsstatistik}
+		\label{abb:mockDeviceUsage}
+	\end{center}
+\end{wrapfigure}
+
+Über die Nutzungsstatistik kann der Benutzer auslesen, wie lange die Werte der Sensoren in den einzelnen Temperaturbereichen lagen. Dies kann zum Beispiel Auskunft über eine Fehlerhafte Installation (nicht genügend Wärmeabfuhr am Kühlkörper) Aufschluss geben.
+
+Auch die Statistikseite kann von Gerätetyp zu Gerätetyp variieren.
+
+\WFclear
+\vspace{2cm}
+
+\subsection{Fehlerhistorie}
+\label{subsec:Fehlerhistorie}
+
+\begin{wrapfigure}{r}{6cm}
+	\begin{center}
+		\includegraphics[page=8,trim=0 0 0 0,clip,scale=0.21]{uiux/res/mockups}
+		\caption{Mockup Fehlerhistorie}
+		\label{abb:mockDeviceErrors}
+	\end{center}
+\end{wrapfigure}
+
+In der Fehlerhistorie werden dem Benutzer die letzten zehn Fehlercodes des Gerätes angezeigt. Diese Bestehen aus einem Fehlercode und einem beschreibenden Text. Zudem wird der Laufzeitzähler des Gerätes zum Fehlerzeitpunkt ausgegeben. Das heisst, für jeden Fehler kann nachgesehen werden, in welcher Laufzeitstunde (ab Installationszeitpunkt) der Fehler aufgetreten ist.
+
+Einzelne Gerätetypen wie z.B. Thermostaten haben weniger oder mehr Fehlercodes in der Historie.
+
+\WFclear
+\vspace{2cm}
