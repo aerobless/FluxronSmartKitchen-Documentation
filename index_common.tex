@@ -1,13 +1,7 @@
-\input{config/configuration}
-\input{config/commands}
-\input{config/standardtexts}
- 
-\begin{document}
-
 %Intro-Teil
-\include{start/titlepage}
-\include{start/abstract}
-\include{start/managementsummary}
+\input{start/titlepage}
+\input{start/abstract}
+\input{start/managementsummary}
 
 %TODO: Selbststaendigkeitserklaerung als pdf unter start/erklaerung includen.
 %\includepdf[pages=-, pagecommand={},
@@ -18,12 +12,12 @@
 \tableofcontents
 
 %Hauptteil here
-\include{analysis/index}
-\include{projectmanagement/index}
-\include{design/index}
-\include{uiux/index}
-\include{results/index}
-\include{prospects/index}
+\input{analysis/index}
+\input{projectmanagement/index}
+\input{design/index}
+\input{uiux/index}
+\input{results/index}
+\input{prospects/index}
 
 \nocite{*}
 \bibliographystyle{IEEEtran}
@@ -41,6 +35,4 @@
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
-\include{appendix/index}
-
-\end{document}
+\input{appendix/index_common}
