@@ -4,6 +4,7 @@
 Zur Überprüfung der Applikationsfunktionalität werden Systemtests sowohl vom Entwicklerteam als auch von der \fluxron{} durchgeführt.
 
 \subsection{Systemtest Abdeckung}
+\label{sub:systemtest_abdeckung}
 Mit folgender Tabelle wird gezeigt das alle \ac{FR}, \ac{NFR} und Use Cases durch Systemtests abgedeckt sind.
 
 \begin{table}[H]
@@ -28,13 +29,38 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 \caption{Systemtest Abdeckung}
 \end{table}
 
-%TODO Abdeckungsliste noch in umgekehrter Form
-
 \subparagraph{Nicht abgedeckte Anforderungen}
 \begin{itemize}
 \item \ac{FR}16-17 (3. Priorität) fehlen in der Systemtest Abdeckungs Tabelle da sie sich nur konzeptionell auf das Projekt auswirken und nicht getestet werden können.
 \item \ac{NFR}2-6 sind nicht durch Systemtests überprüfbar.
 \end{itemize}
+
+\subsection{Systemtest Durchführung}
+\label{sub:systemtest_durchfuehrung}
+
+\begin{table}[H]
+\begin{tabularx}{\textwidth}{ l | l | l | X }
+\textbf{18.10} &\textbf{01.11} &\textbf{10.11} &\textbf{Systemtest}\\ \hline
+x & x & \checkmark &ST1: Küche initialisieren \\ \hline
+x & x & \checkmark &ST2: Küche anpassen \\ \hline
+\checkmark & \checkmark & \checkmark &ST3: Küche löschen \\ \hline
+x & x & x &ST4: Protokoll auslesen \\ \hline
+x & x & \checkmark &ST5: Geräteparameter ändern \\ \hline
+x & x & x &ST6: Geräteparameter ändern mit Validierung \\ \hline
+x & x & \checkmark &ST7: Kritische Geräteparameter ändern \\ \hline
+x & x & x &ST8: Kennwortschutz  \\ \hline
+x & x & x &ST9: Kennwortschutz mit falschem Kennwort \\ \hline
+x & \checkmark & \checkmark &ST10: Suchlauf mit Gruppierung \\ \hline
+x & x & x &ST11: Austausch von Küchenlayouts \\ \hline
+x & x & \checkmark \footnotemark[1] &ST12: Küche mit grosser Anzahl Geräte (50) \\ \hline
+x & x & \checkmark \footnotemark[1] &ST13: Küche mit grosser Anzahl Geräte (150) \\ \hline
+\checkmark & \checkmark & \checkmark &ST14: Bluetooth Unterstützung \\ \hline
+\checkmark & \checkmark & \checkmark &ST15: Keine Netzwerkkonnektivität \\
+\end{tabularx}
+\caption{Systemtest Durchführungen}
+\end{table}
+\
+\footnotetext[1]{Getestet mit simulierten Geräten ohne echte Bluetooth Verbindung.}
 
 \subsection{ST1: Küche initialisieren}
 \begin{table}[H]
