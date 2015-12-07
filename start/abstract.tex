@@ -5,4 +5,12 @@
 
 \chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}
 
-todo
+Die Firma Fluxron Solutions AG mit Sitz in Amriswil stellt Heizlösungen und Küchengeräte auf Induktionsbasis her. Diese Geräte besitzen eine Bluetooth-Schnittstelle, über welche die Einstellungen angepasst werden können. Zudem bietet die Schnittstelle eine ausführliche Laufzeit- und Fehlerprotokollierung an. Servicetechniker benötigen genau diese Informationen zur Fehlersuche und Reparatur der Geräte in Grossküchen. Aufgrund der grossen Anzahl Geräte, ist es schwierig die Installationen im Überblick zu behalten.
+
+In dieser Arbeit wurde eine Applikation für Android entwickelt, welche von den Technikern zur Diagnose und Konfiguration genutzt werden kann. Die Lage der verbauten Geräte wird auf Situationsfotos markiert. Damit kann bei einem Serviceeinsatz die Position und der Status aller Kochinstallationen angezeigt werden.
+
+Zur Umsetzung des Projektes wurden agile Softwareentwicklungsmethoden eingesetzt. Neben einer gründlichen Anforderungsanalyse wurde die Benutzeroberfläche mit Mockups konzipiert und mittels Usability Walkthroughs validiert.
+
+Als Programmiersprache wurde Java 7 für Android eingesetzt. Die Anwendungsarchitektur besteht aus drei Layern, welche mittels Messages über ein Event Bus System kommunizieren. Um eine zeitgemässe Benutzeroberfläche zu erstellen, wurde diese im schlichten aber effektiven Material Design umgesetzt. Lokal werden die Daten in einer dokumentbasierten Datenbank gespeichert. Die Kommunikation mit den Geräten erfolgt über das CANopen Protokoll. Darüber hinaus bietet die Anwendung konzeptionelle Unterstützung für eine Anbindung an ein Cloud-Backend.
+
+Der Funktionsumfang der Mobilapplikation umfasst die Verwaltung mehrerer Küchen und der darin verbauten Geräte. Küchen können zur besseren Übersicht in einzelne Bereiche unterteilt werden. Die Geräte eines Bereichs werden regelmässig zur Statusaktualisierung abgefragt. \todo{V1 - AKTUALISIERUNG NÖTIG!}
