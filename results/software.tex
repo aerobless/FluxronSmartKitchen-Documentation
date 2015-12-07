@@ -89,3 +89,57 @@ Nachfolgend ist der Nachrichtenverlauf am Beispiel \enquote{Ändern im Fehlerfal
 \item{Aufgetretene Fehlermeldungen werden als Event über den Bus versendet}
 \item{Meldung trifft bei Benutzeroberfläche ein, Fehler wird dargestellt}
 \end{enumerate}
+
+\subsection{Codestatistik}
+
+Zur Überprüfung der Codestatistik wurde neben Codereviews auch Codestatistiken ausgewertet. Nachfolgend ist die Statistik für das Projektende aufgeführt. Alle gemessenen Werte befinden sich im erwarteten und grünen Bereich. Im Schnitt zeigen diese Werte eine gute Wartbarkeit und Qualität des entwickelten Programms.
+
+Bei einzelnen Klassen sind Abweichungen vom Durchschnitt festzustellen. Diese lassen sich aber alle begründen. So sind zum Beispiel die Werte für die \enquote{Lack of Cohesion of Methods} der Plain Old Java Objects sehr hoch, denn diese bestehen nur aus Gettern und Settern.
+
+\subsubsection{Class Metrics}
+
+\begin{table}[H]
+	\begin{center}
+	  \begin{tabular}{ | l | r | }
+	    \hline
+	    \textbf{Metrik} & \textbf{Wert} \\ \hline
+	    (Avg) Coupling Between Objects & 7.30\\ \hline
+   	    (Avg) Depth of Inheritance & 2.35 \\ \hline
+   	    (Avg) Lack of Cohesion of Methods & 2.04 \\ \hline
+  	    (Avg) Weighted Method Complexity & 9.34 \\ \hline
+  	    Number of Product Plasses & 217.00 \\ \hline
+	  \end{tabular}
+	  \caption{Class Metrics für ch.fluxron.fluxronapp}
+  \end{center}
+\end{table}
+
+\subsubsection{Complexity Metrics}
+
+\begin{table}[H]
+	\begin{center}
+	  \begin{tabular}{ | l | r | }
+	    \hline
+	    \textbf{Metrik} & \textbf{Wert} \\ \hline
+	    (Avg) Method Cyclomatic Complexity & 1.56 \\ \hline
+  	    (Avg) Method Lines Of Code & 11.69 \\ \hline
+  	    (Avg) Comment to Code Ratio & 38.56 \\ \hline
+  	    (Avg) Javadoc Lines per Method & 4.23 \\ \hline
+	  \end{tabular}
+	  \caption{Complexity Metrics für ch.fluxron.fluxronapp}
+  \end{center}
+\end{table}
+
+\subsubsection{Dependency Metrics}
+
+\begin{table}[H]
+	\begin{center}
+	  \begin{tabular}{ | l | r | }
+	    \hline
+	    \textbf{Metrik} & \textbf{Wert} \\ \hline
+	    (Avg) Number of Cyclic Dependencies & 0.00 \\ \hline
+  	    (Avg) Number of Class Dependencies & 4.33 \\ \hline
+  	    (Avg) Number of Package Dependencies & 0.96 \\ \hline
+	  \end{tabular}
+	  \caption{Complexity Metrics für ch.fluxron.fluxronapp}
+  \end{center}
+\end{table}
