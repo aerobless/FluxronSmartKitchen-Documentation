@@ -4,11 +4,11 @@
 \input{start/managementsummary}
 \input{start/eigenstaendigkeitserklaerung}
 
-%TODO: Selbststaendigkeitserklaerung als pdf unter start/erklaerung includen.
-%\includepdf[pages=-, pagecommand={},
-%scale=0.73, trim=80 210 80 80]{start/erklaerung}
+%\addcontentsline{toc}{chapter}{Aufgabenstellung}
+\includepdf[pages=-, pagecommand={},
+% trim={<left> <lower> <right> <upper>}
+scale=0.9, trim=10 70 10 5,clip]{start/res/aufgabenstellung}
 
-%TODO: Index auf Deutsch
 \addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
 \tableofcontents
 
@@ -16,7 +16,7 @@
 \input{analysis/index}
 \input{projectmanagement/index}
 \input{design/index}
-\input{uiux/index}
+\input{uiux/index}xw
 \input{results/index}
 \input{prospects/index}
 
