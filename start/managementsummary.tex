@@ -10,9 +10,9 @@
 	\vspace{-0.5cm}
 \end{wrapfigure}
 
-Die Firma Fluxron Solutions AG entwickelt in Amriswil Heizlösungen und Küchengeräte mit Induktionstechnologie. Die Küchengeräte sind allerdings keine Produkte für die private Küche zuhause, sondern Einbaugeräte für Kombinationen in Grossküchen. Darunter sind neben verschiedenen Induktionsherdmodellen auch elektronisch gesteuerte Thermostate. Meistens werden die Geräte nicht durch Fluxron selbst verbaut, sondern über eine Servicefirma installiert und dann beim Endkunden in der Grossküche verbaut.
+Die Firma \fluxron{} entwickelt in Amriswil Heizlösungen und Küchengeräte mit Induktionstechnologie. Die Küchengeräte sind allerdings keine Produkte für die private Küche zuhause, sondern Einbaugeräte für Kombinationen in Grossküchen. Darunter sind neben verschiedenen Induktionsherdmodellen auch elektronisch gesteuerte Thermostate. Meistens werden die Geräte nicht durch Fluxron selbst verbaut, sondern über eine Servicefirma installiert und dann beim Endkunden in der Grossküche verbaut.
 
-Die Firma stattet dazu die Geräte mit einem Bluetoothmodul aus. Darüber können ohne Kabelverbindung die Geräteeinstellungen angepasst und ausgelesen werden. Zudem liefert die Schnittstelle auch ausführliche Laufzeit- und Fehlerprotokolle.
+Fluxron stattet die Geräte serienmässig mit einem Bluetoothmodul aus. Darüber können ohne Kabelverbindung die Geräteeinstellungen angepasst und ausgelesen werden. Zudem liefert die Schnittstelle auch ausführliche Laufzeit- und Fehlerprotokolle.
 
 \begin{wrapfigure}{r}{4.5cm}
 	\vspace{-0.5cm}
@@ -24,11 +24,11 @@ Die Firma stattet dazu die Geräte mit einem Bluetoothmodul aus. Darüber könne
 
 Ein Servicetechniker benötigt genau diese Informationen, um vor einer allfälligen Reparatur der Geräte in Grossküchen eine Diagnose des Problems zu stellen. Dies ist besonders nützlich, da häufig keine Reparatur des Gerätes nötig ist, sondern nur eine Einstellung geändert werden muss. Oft wird Vielzahl von Geräten verbaut und es ist für die Techniker schwierig, die Installationen auch bei einem späteren Serviceeinsatz noch genau zu kennen. Sie sollen dabei durch eine Smartphone Applikation unterstützt werden.
 
-Die Firma hat bereits eine solche Applikation im Einsatz, allerdings kann diese nur für den Gebrauch mit einem einzelnen Gerät genutzt werden. Daher soll eine neue App von Grund auf erstellt werden. Damit sollen Techniker die Installationen in den verschiedenen Küchen speichern, und bei der Wartung wieder abrufen können. Sie sollen die Geräte in einem Suchlauf finden, deren Position in der Küche markieren und den Status einsehen können. Weiter sollen die Einstellungen der Geräte mit der App verändert werden können.
+Die Firma hat bereits eine solche Applikation im Einsatz, allerdings kann diese nur für den Gebrauch mit einem einzelnen Gerät genutzt werden. Daher soll eine neue App von Grund auf entwickelt werden. Damit sollen Techniker die Installationen in den verschiedenen Küchen speichern, und bei der Wartung wieder abrufen können. Sie sollen die Geräte in einem Suchlauf finden, deren Position in der Küche markieren und den Status einsehen können. Weiter soll es möglich sein die Einstellungen der Geräte mit der App anzupassen.
 
 \textbf{Vorgehen}
 
-Zur Umsetzung des Projektes wurden agile Softwareentwicklungsmethoden eingesetzt. In  wöchentlichen Meetings wurde die weiteren Aufgaben priorisiert und in planbare Tasks aufgeteilt. Initialisiert wurde das Projekt begann mit einer gründlichen Anforderungsanalyse mittels User Stories und Use Cases. 
+Zur Umsetzung des Projektes wurden agile Softwareentwicklungsmethoden eingesetzt. In  wöchentlichen Meetings wurde die weiteren Aufgaben priorisiert und in planbare Tasks aufgeteilt. Initialisiert wurde das Projekt mit einer gründlichen Anforderungsanalyse mittels User Stories und Use Cases. 
 
 Aufbauend auf den Anforderungen wurde dann die Benutzeroberfläche mittels Mockups entworfen und im Walkthrough besprochen. Dies lieferte die Grundlage für die technische Konzeption der Applikation, welche aus der Architekturdefinition und Evaluationen zur genutzten Technologie besteht.
 
@@ -39,9 +39,9 @@ Nach Analyse und Konzeption wurde die Anwendung iterativ im Wochenrhythmus imple
 \end{wrapfigure}
 \textbf{Technologien}
 
-Bild des Technologiestacks (Icons der Hersteller)
+Bild des Technologiestacks (Icons der Hersteller).
 
-Die Anwendung wurde mit Java 7 für Android umgesetzt. Um eine gute Kompatibilität zu gewährleisten, ist die App ab der Androidversion 4.3 aufwärts nutzbar. Die Anwendungsarchitektur besteht aus drei Ebenen, welche mittels Meldungen über den Green Robot Event Bus kommunizieren.
+Die Anwendung wurde mit Java 7 für Android umgesetzt. Um eine gute Kompatibilität zu gewährleisten, ist die App ab Androidversion 4.3 und höher nutzbar. Die Anwendungsarchitektur besteht aus drei Ebenen, welche mittels Meldungen über den Green Robot Event Bus kommunizieren.
 
 Alle Anwendungsdaten werden in einer lokalen Couchbase Lite-Datenbank gespeichert und können über die Exportfunktion per EMail ausgetauscht werden. Die Kommunikation mit der Hardware erfolgt über das CANopen-Protokoll und funktioniert somit für alle Küchengeräte der Firma Fluxron.
 
@@ -82,7 +82,7 @@ Die Anwendung wird nun an die Firma Fluxron übergeben und dort zur Marktreife w
 
 In der aktuellen Version der App wurden aus Zeitgründen nur die Gerätetypen C- und S-Class vollständig angebunden. Es ist aber problemlos möglich, weitere Fluxron-Geräte anzusprechen. Die Anwendung unterscheidet die Geräte bereits an ihrem Herstellercode und kann daher um beliebige Gerätetypen erweitert werden. Es muss lediglich die Benutzeroberfläche für die entsprechenden Gerätetypen definiert werden. Neben der Oberfläche kann auch ein neuer Parametersatz (EDS-Datei) integriert werden. Dieser wird dann über die automatische Generierung für den Entwickler vorbereitet und kann einfach mit der Benutzeroberfläche verbunden werden.
 
-Neben neuen Gerätetypen bietet die Anwendung aber weiteres Potenzial für die Zukunft. So könnte zum Beispiel eine Funktion zum Einlesen und Versenden der gesamten Gerätekonfiguration neue Möglichkeiten bei Diagnose und Konfiguration bieten.
+Neben neuen Gerätetypen bietet die Anwendung noch weiteres Potenzial für die Zukunft. So könnte zum Beispiel eine Funktion zum Einlesen und Versenden der gesamten Gerätekonfiguration neue Möglichkeiten bei Diagnose und Konfiguration bieten.
 
 Ausserdem ist die App bereits jetzt darauf vorbereitet, an die Cloud angebunden zu werden. Dies einerseits durch die Verwendung einer entsprechenden Datenbanktechnologie und andererseits durch die meldungsbasierte Architektur. Damit würden sich neue Möglichkeiten wie z.B. Nutzungs- oder Fehlerprotokolle bieten. Zudem könnten die Servicefirmen damit alle Küchen zentral speichern und müssten die Küchen nicht mehr per EMail verteilen.
 
