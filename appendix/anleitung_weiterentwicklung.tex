@@ -23,3 +23,93 @@ Parameter können in den 4 Fragments (Status, Usage, Errors, Config) der Geräte
 Als erstes muss also das entsprechende Fragment Layout geöffnet werden. Darin kann dann ein neues UI Control eingefügt werden. Für veränderbare Parameter sollte \code{ParameterEditable} verwendet werden, unveränderliche Parameter können als \code{ParameterView} oder \code{TemperatureBar} dargestellt werden. Die UI Controls verfügen über ein \enquote{ParamName}-Property wo der gewünschte Parameter mittels Autocompletion gesetzt werden kann. \code{ParameterEditable} Controls verfügen zudem über ein \enquote{editableAccessLevel}-Property womit die Sichtbarkeit für die unterschiedlichen AccessLevels der User gesteuert werden kann.
 
 Wenn das neue Control in einer bestehenden Liste von Parametern eingefügt worden ist, dann ist keine weitere Änderung mehr notwendig. Falls das Control ausserhalb eingebaut wurde muss es in der entsprechenden Backing-Klasse noch angezogen werden. Die Backing-Klassen befinden sich unter \code{app/java/ch.fluxron.fluxronapp/ui/fragments}. In der entsprechenden Klasse muss beim Eintreten eines \code{DeviceChanged} Events die Methode \code{handleDeviceChanged(..)} auf dem Control des Parameters aufgerufen werden. Falls ein AccessLevel gesetzt wurde muss ausserdem die Methode \code{handleAccessLevel(..)} beim Eintreten eines \code{AccessGranted} Events aufgerufen werden.
+
+\subsection{Neuen Meldungstyp einfügen}
+Um einen neuen Meldungstyp zu erstellen, muss eine neue Klasse im Package \code{} eingefügt werden. Für eine einfache Meldungsklasse ist dies bereits ausreichen. Für Meldungen, welche beantwortet werden sollen, empfiehlt es sich eine \code{RequestResponseConnection} zu verwenden. Diese gibt jeder Meldung eine Verbindungs-Id. Diese kann von anderen Meldungen übernommen werden und damit können Antworten auf eine Meldung vom Absender der ursprünglichen Anfrage eindeutig identifiziert werden.
+
+\begin{figure}[H]
+\begin{lstlisting}
+/**
+ * Requests the download of a news channel
+ */
+public class DownloadNewsChannelCommand extends RequestResponseConnection {
+    private String newsChannelUrl;
+
+    /**
+     * New device deletion request
+     * @param newsChannelUrl Id of the kitchen
+     */
+    public DownloadNewsChannelCommand(String newsChannelUrl) {
+        this.newsChannelUrl = newsChannelUrl;
+    }
+
+    /**
+     * Returns the url of the Channel
+     * @return Url of the kitchen
+     */
+    public String getNewsChannelUrl() {
+        return newsChannelUrl;
+    }
+}
+\end{lstlisting}
+\caption{Neue Meldungsklasse mit einem übertragenen Wert}
+\end{figure}
+
+\subsection{Empfangen und Senden von Meldungen}
+Die neue Meldungsklasse muss nun natürlich noch entgegengenommen werden. Dazu muss eine Klasse die Methode \code{onEventAsync(DownloadNewsChannelCommand)} besitzen und sich beim Event Bus registrieren.
+
+\begin{figure}[H]
+\begin{lstlisting}
+/**
+ * Loads a news stream from the server
+ */
+public class NewsDownloadManager {
+
+  private IEventBusProvider provider;
+
+  /**
+   * Creates a new object creation manager
+   * @param provider Provider
+   */
+  public NewsDownloadManager(IEventBusProvider provider) {
+      this.provider = provider;
+      provider.getDalEventBus().register(this);
+  }
+  
+   /**
+   * Download requested
+   * @param msg Message with info
+   */
+  public void onEventAsync(DownloadNewsChannelCommand msg) {
+  	NewsList latest = downloadNews(msg.getNewsChannelUrl());
+  	
+  	NewsLoaded event = new NewsLoaded(latest);
+  	event.setConnectionId(msg);
+  	provider.getUiEventBus().post(event);
+  }
+}
+\end{lstlisting}
+\caption{Abonnieren und Beantworten von Meldungen}
+\end{figure}
+
+
+Die Methode wird für jede empfangene Meldung aufgerufen und es kann darauf reagiert werden. Um das Ergebnis wieder zurückzuliefern, wird hier mit \code{setConnectionId(msg)} die Meldungs-Id des Commands wiederverwendet.
+
+\subsection{Synchrones warten auf Meldung}
+
+Achtung: Dies darf nur in \code{onEventAsync()} gemacht werden, ansonsten wird ein Deadlock erzeugt, da der aktuelle Thread blockiert wird.
+
+In manchen Verarbeitungsprozessen ist es notwendig, z.B. zu warten bis eine Antwort von einem anderen Layer vorliegt. Dies ist meistens zwischen Businesslayer und Data Access Layer nötig. Nachfolgend ein Beispiel, in welchem auf das Speichern eines Objektes in der Datenbank gewartet wird. Somit bleiben die Managerklassen statuslos und können wie ein Webserver implementiert werden.
+
+\begin{figure}[H]
+\begin{lstlisting}
+SaveObjectCommand saveCommand = new SaveObjectCommand();
+saveCommand.setData(kitchenToSave);
+saveCommand.setDocumentId("sampleId");
+
+// Programm laeuft erst weiter, wenn eine Meldung mit derselben Verbindungs-Id empfangen wurde
+WaitForResponse<RequestResponseConnection> waitForSave = new WaitForResponse<>();
+RequestResponseConnection response = waitForSave.postAndWait(provider.getDalEventBus(), saveCommand, RequestResponseConnection.class);
+\end{lstlisting}
+\caption{Synchrones Warten auf Meldungen}
+\end{figure}
