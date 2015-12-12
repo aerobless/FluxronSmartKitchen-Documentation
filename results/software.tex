@@ -113,6 +113,10 @@ Bei einzelnen Klassen sind Abweichungen vom Durchschnitt festzustellen. Diese la
   \end{center}
 \end{table}
 
+Hier stechen zwei Metriken besonders hervor. Die hohe Klassenzahl ist durch die Meldungsklassen erklärbar. Da jede Aktion mit einem Command und mindestens einer Response umgesetzt werden muss, ergibt dies eine hohe Klassenzahl. Dies ist allerdings nicht problematisch, sind die Meldungsklassen doch meist nicht mehr als simple Klassen mit ein bis zwei Variablen ohne Logik.
+
+Die hohe Weighted Method Complexity erklärt sich mit der Verwendung des Event Bus. Jeder Meldungstyp muss mit einer Methode abonniert werden. Die Klassen, welche Meldungen verarbeiten erhalten somit viele Methoden. Gerade im Model macht es keinen Sinn, für jede Meldungsklasse eine eigene Abonnentenklasse zu definieren. Diese Manager daher erhalten eine hohe Metrik, sind aber nicht problematisch.
+
 \subsubsection{Complexity Metrics}
 
 \begin{table}[H]
@@ -129,6 +133,8 @@ Bei einzelnen Klassen sind Abweichungen vom Durchschnitt festzustellen. Diese la
   \end{center}
 \end{table}
 
+Hier sind alle Metriken in sehr guten Bereichen. Die Metriken bescheinigen der Anwendung eine hohe Wartbarkeit und zeigen wunderbar auf, wie ein Event Bus die Architektur und Komplexität der Applikation vereinfachen kann.
+
 \subsubsection{Dependency Metrics}
 
 \begin{table}[H]
@@ -140,6 +146,8 @@ Bei einzelnen Klassen sind Abweichungen vom Durchschnitt festzustellen. Diese la
   	    (Avg) Number of Class Dependencies & 4.33 \\ \hline
   	    (Avg) Number of Package Dependencies & 0.96 \\ \hline
 	  \end{tabular}
-	  \caption{Complexity Metrics für ch.fluxron.fluxronapp}
+	  \caption{Dependency Metrics für ch.fluxron.fluxronapp}
   \end{center}
 \end{table}
+
+Hier fällt die Anzahl Klassenabhängigkeiten auf. Diese ist aber mit 4 immer noch auf sehr gutem Niveau.
