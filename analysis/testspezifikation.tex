@@ -31,14 +31,14 @@ A  & 2 & &  ST10: Suchlauf mit Gruppierung \\ \hline
 
 \subparagraph{Nicht abgedeckte Anforderungen}
 \begin{itemize}
-\item \ac{FR}16-17 (3. Priorität) fehlen in der Systemtest Abdeckungs Tabelle da sie sich nur konzeptionell auf das Projekt auswirken und nicht getestet werden können.
+\item \ac{FR}16-17 (3. Priorität) fehlen in der Systemtest Abdeckungs Tabelle, da sie sich nur konzeptionell auf das Projekt auswirken und nicht getestet werden können.
 \item \ac{NFR}2-6 sind nicht durch Systemtests überprüfbar.
 \end{itemize}
 
 \subsection{Systemtest Durchführung}
 \label{sub:systemtest_durchfuehrung}
 
-Die Systemtests wurden im Verlauf der Arbeit nach jedem Meilenstein (siehe \ref{sec:Meilensteine}) durchgeführt um den Fortschritt zu kontrollieren. Am 25.11.2015 wurde die Applikation bei Fluxron in Amriswil an voll funktionsfähigen Geräten getestet. Dabei wurden alle Systemtests erfüllt. Einzig die Systemtests ST12 und ST13 konnten nicht vollständig getestet werden da keine Möglichkeit bestand die Systemtests in einer echten Grossküche durchzuführen.
+Die Systemtests wurden im Verlauf der Arbeit nach jedem Meilenstein (siehe \ref{sec:Meilensteine}) durchgeführt um den Fortschritt zu kontrollieren. Am 25.11.2015 wurde die Applikation bei Fluxron in Amriswil an voll funktionsfähigen Geräten getestet. Dabei wurden alle Systemtests erfüllt. Einzig die Systemtests ST12 und ST13 konnten nicht vollständig getestet werden, da keine Möglichkeit bestand die Systemtests in einer echten Grossküche durchzuführen.
 
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{ l | l | l | l | l | X }
@@ -76,7 +76,7 @@ x & x & \checkmark \footnotemark[2] &\checkmark \footnotemark[2] & \checkmark \f
 \textbf{Durchführung} & \begin{enumerate}
 \item Eine neue Küche erstellen und Namen vergeben
 \item Das Layout der Küche nachstellen
-\item Den Geräte-Suchlauf starten
+\item Den Gerätesuchlauf starten
 \item Die gefundenen Geräte im Küchenlayout platzieren
 \item Die Küchenerstellung abschliessen
 \end{enumerate} \\
@@ -97,7 +97,7 @@ x & x & \checkmark \footnotemark[2] &\checkmark \footnotemark[2] & \checkmark \f
 \textbf{Durchführung} & \begin{enumerate}
 \item Die bestehende Küche öffnen
 \item Ein Gerät auswählen und entfernen
-\item Den Geräte-Suchlauf starten
+\item Den Gerätesuchlauf starten
 \item Das vorher entfernte Gerät soll gefunden werden und wieder zur Küche hinzugefügt werden
 \item Die Küchenerstellung abschliessen
 \end{enumerate} \\
@@ -169,7 +169,7 @@ x & x & \checkmark \footnotemark[2] &\checkmark \footnotemark[2] & \checkmark \f
 \item Einen Parameter wählen und einen neuen, ungültigen Wert eingeben
 \item Speichern
 \end{enumerate} \\
-\textbf{Erwartetes Ergebnis} & Der Parameter akzeptiert den ungültigen Wert nicht, es wird eine entsprechende Fehlermeldung dargestellt und die Änderung wird nicht gespeichert.\\
+\textbf{Erwartetes Ergebnis} & Der Parameter akzeptiert den ungültigen Wert nicht. Es wird eine entsprechende Fehlermeldung dargestellt und die Änderung wird nicht gespeichert.\\
 \end{tabularx}
 \end{table}
 
@@ -187,7 +187,7 @@ x & x & \checkmark \footnotemark[2] &\checkmark \footnotemark[2] & \checkmark \f
 \item Die bestehende Küche öffnen
 \item Ein Gerät auswählen und dessen sicherheitsrelevanten Parameter anpassen
 \end{enumerate} \\
-\textbf{Erwartetes Ergebnis} & Ein sicherheitsrelevanter Parameter eines Geräts wurden verändert.\\
+\textbf{Erwartetes Ergebnis} & Ein sicherheitsrelevanter Parameter eines Geräts wurde verändert.\\
 \end{tabularx}
 \end{table}
 
@@ -225,7 +225,7 @@ x & x & \checkmark \footnotemark[2] &\checkmark \footnotemark[2] & \checkmark \f
 \item Applikation gestartet
 \item Es sind mindestens 3 Geräte mit aktiver Bluetooth Verbindung vorhanden
 \end{itemize} \\
-\textbf{Durchführung} & Ein Geräte-Suchlauf durchführen\\
+\textbf{Durchführung} & Ein Gerätesuchlauf durchführen\\
 \textbf{Erwartetes Ergebnis} & Die gefundenen Geräte werden übersichtlich gruppiert dargestellt.\\
 \end{tabularx}
 \end{table}
@@ -234,7 +234,7 @@ x & x & \checkmark \footnotemark[2] &\checkmark \footnotemark[2] & \checkmark \f
 \subsection{ST11: Austausch von Küchenlayouts}
 \begin{table}[H]
 \begin{tabularx}{\textwidth}{r X }
-\textbf{Testziel} & Erfüllen von \ac{FR}15. Bereits initialisierte Küchen Konfigurationen können mit anderen Benutzern ausgetauscht werden. \\
+\textbf{Testziel} & Erfüllen von \ac{FR}15. Bereits initialisierte Küchenkonfigurationen können mit anderen Benutzern ausgetauscht werden. \\
 \textbf{Vorbedingungen} & \begin{itemize}
 \item Ein Android Handy mit einer bereits initialisierten Küche
 \item Ein Android Handy ohne initialisierte Küchen
@@ -282,11 +282,10 @@ x & x & \checkmark \footnotemark[2] &\checkmark \footnotemark[2] & \checkmark \f
 \textbf{Durchführung} & \begin{enumerate}
 \item Eine neue Küche initialisieren
 \item 150 Geräte via Suchlauf finden und im Küchenlayout platzieren
-\item Prüfen dass der Status der Geräte sichtbar ist
-\item Prüfen dass einzelne Geräte noch auswählbar sind und deren Parameter verändert werden können
+\item Prüfen, dass der Status der Geräte sichtbar ist
+\item Prüfen, dass einzelne Geräte noch auswählbar sind und deren Parameter verändert werden können
 \end{enumerate} \\
-\textbf{Erwartetes Ergebnis} & Bei 150 Geräten sind mit Einschränkungen %TODO Einschränkungen genauer spzeifizieren
-zu rechnen. Die Applikation hat aber keine Performance-Probleme und es können alle kritischen Funktionen verwendet werden.\\
+\textbf{Erwartetes Ergebnis} & Bei 150 Geräten ist mit Einschränkungen zu rechnen. Die Applikation hat aber keine Performance-Probleme und es können alle kritischen Funktionen verwendet werden.\\
 \end{tabularx}
 \end{table}
 
