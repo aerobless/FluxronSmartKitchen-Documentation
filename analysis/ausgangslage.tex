@@ -19,13 +19,14 @@ Neben den Servicefirmen setzen auch die Mitarbeiter der Firma Fluxron die Androi
 
 \subsection{Bestehende Android-Applikation - Fluxron Systemkonfigurator }
 \label{subsec:Bestehende Smartphone-Applikation}
-Fluxron hat in Eigenentwicklung bereits eine einfache Android-Applikation geschrieben. Diese unterstützt das Suchen von Geräten sowie das Lesen und Schreiben von Parametern. Da diese App allerdings immer nur ein Gerät gleichzeitig bedienen kann und die Benutzerinteraktion daher sehr zeitaufwändig ist, soll im Rahmen dieses Projektes eine neue, übersichtlichere Androidapplikation entstehen. In den nachfolgenden Abschnitten sind die Funktionen dieser Applikation aus funktioneller Sicht aufgelistet.
+Fluxron hat in Eigenentwicklung bereits eine einfache Android-Applikation geschrieben. Diese unterstützt das Suchen von Geräten sowie das Lesen und Schreiben von Parametern. Da diese App allerdings immer nur ein Gerät gleichzeitig bedienen kann und die Benutzerinteraktion daher sehr zeitaufwändig ist, soll im Rahmen dieses Projektes eine neue, übersichtlichere Androidapplikation entstehen. In den nachfolgenden Abschnitten sind die Funktionen dieser Applikation aufgelistet.
 
 \subsubsection{Installation und Konfiguration}
 \label{subsubsec:Installation und Konfiguration}
 Die App ist öffentlich im Google Play Store erhältlich. Nach dem Download muss der Benutzer aber ein Kennwort eingeben, um Zugang zur App und den Gerätefunktionen zu erhalten.
 
 \begin{wrapfigure}[9]{l}{6cm}
+\vspace{-1cm}
 	\includegraphics[scale=0.3]{analysis/res/SelectDevice}
 	\caption{Geräteauswahl FLX Tool}
 \end{wrapfigure}
@@ -33,7 +34,7 @@ Die App ist öffentlich im Google Play Store erhältlich. Nach dem Download muss
 \subsubsection{Verbindungsaufbau zu einem Gerät}
 \label{subsubsec:Verbindungsaufbau zu einem Gerät}
 
-Um eine Verbindung mit einem Gerät herzustellen, muss dieses zuerst über einen Suchlauf gefunden werden. Der Suchlauf zeigt alle momentan aktiven Geräte in einer Liste mit ihrer Device-ID an. In der Liste sind neben den aktiven Geräten auch alle Geräte aufgelistet, welche schon einmal mit der App verbunden waren.
+Um eine Verbindung mit einem Gerät herzustellen, muss dieses zuerst über einen Suchlauf gefunden werden. Der Suchlauf zeigt alle momentan aktiven Geräte in einer Liste mit ihrer Device-ID an. In dieser Liste sind neben den aktiven Geräten auch alle Geräte aufgelistet, welche schon einmal mit der App verbunden waren.
 
 Danach kann man sich mit einem Gerät aus der Liste verbinden um mit dem Gerät zu interagieren.
 \vspace{16pt}
@@ -45,17 +46,18 @@ Danach kann man sich mit einem Gerät aus der Liste verbinden um mit dem Gerät 
 
 \subsubsection{Setupansicht}
 \label{subsubsec:Setupansicht}
-Wenn ein Gerät verbunden ist, kann in der Setupansicht eine Liste aller Parameter des Gerätes ausgelesen werden. Der Benutzer kann Parameter anwählen, eine kurze Beschreibung dazu ansehen und deren Werte ändern.
+Wenn ein Gerät verbunden ist, kann in der Setup-ansicht eine Liste aller Parameter des Gerätes ausgelesen werden. Der Benutzer kann Parameter anwählen, eine Beschreibung ansehen und Werte ändern.
 
 \subsubsection{Historyansicht}
 \label{subsubsec:Ansichten}
-In der Historyansicht können Betriebszähler eingesehen werden. Sie beinhaltet Werte wie z.B. die Anzahl von \enquote{Power-On} Events oder Laufzeit des Gerätes.
+In der Historyansicht können Betriebszähler eingesehen werden. Sie enthält Werte wie die Anzahl von \enquote{Power-On} Events oder Laufzeit des Gerätes.
 
-Neben den Zählern kann ein Fehlerlog eingesehen werden, welches die letzten zehn Fehlercodes beinhaltet. Dies kann zur Diagnose von Problemen sehr hilfreich sein.
+Neben den Zählern kann ein Fehlerlog eingesehen werden, welches die letzten zehn Fehlercodes zeigt. Dies wird zur Diagnose von Problemen genutzt.
 
 \begin{wrapfigure}[8]{l}{6cm}
+	\vspace{-0.5cm}
 	\includegraphics[scale=0.3]{analysis/res/ShowStatusInduction}
-	\caption{Statusansicht für Induktionsherd}
+	\caption{Statusansicht für \\Induktionsherd}
 \end{wrapfigure}
 
 \subsubsection{Einschränkungen der App}
@@ -81,7 +83,7 @@ Neben den Zählern kann ein Fehlerlog eingesehen werden, welches die letzten zeh
 \subsubsection{FLX Access}
 \label{subsubsec:FLX Access}
 
-Mit FLX Access stellt Fluxron ein Windows-Tool zum auslesen und setzen von gerätespezifischen Parametern bereit. Die Kommunikation erfolgt via Bluetooth. Zudem kann der Gerätestatus ausgelesen werden. 
+Mit FLX Access stellt Fluxron ein Windows-Tool zum Auslesen und Setzen von gerätespezifischen Parametern bereit. Die Kommunikation erfolgt via Bluetooth. Zudem kann der Gerätestatus ausgelesen werden. 
 
 Dieses System ist besonders für die Entwicklungsphase von Geräten geeignet.
 
