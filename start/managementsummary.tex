@@ -22,13 +22,13 @@ Fluxron stattet die Geräte serienmässig mit einem Bluetoothmodul aus. Darüber
 	\vspace{-0.5cm}
 \end{wrapfigure}
 
-Ein Servicetechniker benötigt genau diese Informationen, um vor einer allfälligen Reparatur der Geräte in Grossküchen eine Diagnose des Problems zu stellen. Dies ist besonders nützlich, da häufig keine Reparatur des Gerätes nötig ist, sondern nur eine Einstellung geändert werden muss. Oft wird Vielzahl von Geräten verbaut und es ist für die Techniker schwierig, die Installationen auch bei einem späteren Serviceeinsatz noch genau zu kennen. Sie sollen dabei durch eine Smartphone Applikation unterstützt werden.
+Ein Servicetechniker benötigt genau diese Informationen, um vor einer allfälligen Reparatur der Geräte in Grossküchen eine Diagnose des Problems zu stellen. Dies ist besonders nützlich, da häufig keine Reparatur des Gerätes nötig ist, sondern nur eine Einstellung geändert werden muss. Oft wird eine Vielzahl von Geräten verbaut und es ist für die Techniker schwierig, die Installationen auch bei einem späteren Serviceeinsatz noch genau zu kennen. Sie sollen dabei durch eine Smartphone Applikation unterstützt werden.
 
-Die Firma hat bereits eine solche Applikation im Einsatz, allerdings kann diese nur für den Gebrauch mit einem einzelnen Gerät genutzt werden. Daher soll eine neue App von Grund auf entwickelt werden. Damit sollen Techniker die Installationen in den verschiedenen Küchen speichern, und bei der Wartung wieder abrufen können. Sie sollen die Geräte in einem Suchlauf finden, deren Position in der Küche markieren und den Status einsehen können. Weiter soll es möglich sein die Einstellungen der Geräte mit der App anzupassen.
+Die Firma hat bereits eine solche Applikation im Einsatz, allerdings kann diese nur für den Gebrauch mit einem einzelnen Gerät genutzt werden. Daher soll eine neue App von Grund auf entwickelt werden. Damit sollen Techniker die Installationen in den verschiedenen Küchen speichern und bei der Wartung wieder abrufen können. Sie sollen die Geräte in einem Suchlauf finden, deren Position in der Küche markieren und den Status einsehen können. Zudem soll es möglich sein, die Einstellungen der Geräte mit der App anzupassen.
 
 \textbf{Vorgehen}
 
-Zur Umsetzung des Projektes wurden agile Softwareentwicklungsmethoden eingesetzt. In  wöchentlichen Meetings wurde die weiteren Aufgaben priorisiert und in planbare Tasks aufgeteilt. Initialisiert wurde das Projekt mit einer gründlichen Anforderungsanalyse mittels User Stories und Use Cases. 
+Zur Umsetzung des Projektes wurden agile Softwareentwicklungsmethoden eingesetzt. In  wöchentlichen Meetings wurden die weiteren Aufgaben priorisiert und in planbare Tasks aufgeteilt. Initialisiert wurde das Projekt mit einer gründlichen Anforderungsanalyse mittels User Stories und Use Cases. 
 
 Aufbauend auf den Anforderungen wurde dann die Benutzeroberfläche mittels Mockups entworfen und im Walkthrough besprochen. Dies lieferte die Grundlage für die technische Konzeption der Applikation, welche aus der Architekturdefinition und Evaluationen zur genutzten Technologie besteht.
 
@@ -55,7 +55,7 @@ Alle Anwendungsdaten werden in einer lokalen Couchbase Lite-Datenbank gespeicher
 
 \textbf{Ergebnisse}
 
-Die Anwendung unterstützt das Erfassen einer beliebigen Anzahl von Küchen. Der Techniker kann für jede Installation eine eigen Küche erfassen und diese einfach über die Suchfunktion wieder finden. Küchen können um zusätzliche Beschreibungen ergänzt werden.
+Die Anwendung unterstützt das Erfassen einer beliebigen Anzahl von Küchen. Der Techniker kann für jede Installation eine eigen Küche erfassen und diese einfach über die Suchfunktion wieder finden. Küchen können beliebig mit zusätzliche Beschreibungen ergänzt werden.
 
 Um die Situation in einer Grossküche genau erfassen zu können, kann der Techniker die Küche in verschiedene Bereiche unterteilen. Diese werden jeweils mit einem Foto hinterlegt und sind so einfach und effizient erfasst.
 
@@ -70,9 +70,9 @@ Für Servicezwecke kann nun ohne Ausbau oder direkten Zugang zu den Geräten der
 	\end{center}
 	\vspace{-1cm}
 \end{wrapfigure}
-Die Werte werden durch die Applikation für alle Geräte automatisch aktualisiert und ermöglichen somit ein effizientes Arbeiten, auch bei der Diagnose von Problemen bei verschiedenen Geräten ist nur wenig manuelle Interaktion notwendig.
+Die Werte werden durch die Applikation für alle Geräte automatisch aktualisiert und ermöglichen somit ein effizientes Arbeiten. Auch bei der Diagnose von Problemen bei verschiedenen Geräten ist nur wenig manuelle Interaktion notwendig.
 
-Damit wird das Problem der umständlichen Diagnose und Wartung der Geräte gelöst. Die Techniker erfassen die Situation der Küche bereits bei der Installation und können dann bei der Wartung diese wieder abrufen. Dabei ist kein manueller Verbindungsaufbau mehr nötig, da die Geräte bereits erfasst sind.
+Damit wird das Problem der umständlichen Diagnose und Wartung der Geräte gelöst. Die Techniker erfassen die Situation der Küche bereits bei der Installation und können diese dann bei der Wartung wieder abrufen. Dabei ist kein manueller Verbindungsaufbau mehr nötig, da die Geräte bereits erfasst sind.
 
 \pagebreak
 
@@ -82,10 +82,10 @@ Die Anwendung wird nun an die Firma Fluxron übergeben und dort zur Marktreife w
 
 In der aktuellen Version der App wurden aus Zeitgründen nur die Gerätetypen C- und S-Class vollständig angebunden. Es ist aber problemlos möglich, weitere Fluxron-Geräte anzusprechen. Die Anwendung unterscheidet die Geräte bereits an ihrem Herstellercode und kann daher um beliebige Gerätetypen erweitert werden. Es muss lediglich die Benutzeroberfläche für die entsprechenden Gerätetypen definiert werden. Neben der Oberfläche kann auch ein neuer Parametersatz (EDS-Datei) integriert werden. Dieser wird dann über die automatische Generierung für den Entwickler vorbereitet und kann einfach mit der Benutzeroberfläche verbunden werden.
 
-Neben neuen Gerätetypen bietet die Anwendung noch weiteres Potenzial für die Zukunft. So könnte zum Beispiel eine Funktion zum Einlesen und Versenden der gesamten Gerätekonfiguration neue Möglichkeiten bei Diagnose und Konfiguration bieten.
+Nebst der Erweiterung um neue Gerätetypen bietet die Anwendung noch weiteres Potenzial für die Zukunft. So könnte zum Beispiel eine Funktion zum Einlesen und Versenden der gesamten Gerätekonfiguration neue Möglichkeiten bei Diagnose und Konfiguration bieten.
 
 Ausserdem ist die App bereits jetzt darauf vorbereitet, an die Cloud angebunden zu werden. Dies einerseits durch die Verwendung einer entsprechenden Datenbanktechnologie und andererseits durch die meldungsbasierte Architektur. Damit würden sich neue Möglichkeiten wie z.B. Nutzungs- oder Fehlerprotokolle bieten. Zudem könnten die Servicefirmen damit alle Küchen zentral speichern und müssten die Küchen nicht mehr per EMail verteilen.
 
-\vspace{1.4cm}
+\vspace{1cm}
 
 \includegraphics[trim={0 0 36 0},clip]{start/img/img_7670}
