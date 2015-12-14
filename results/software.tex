@@ -4,7 +4,7 @@
 
 Im Rahmen des Projektes wurde eine Android-Applikation entwickelt. Diese läuft ab der Androidversion 4.3 (API Level 18). Mit der Applikation können Servicetechniker Küchenaufbauten protokollieren und die Parametrisierung der Geräte auslesen und bearbeiten.
 
-Die App wurde von der Firma Fluxron AG übernommen und wird dort weiterentwickelt und in den App Store publiziert.
+Die App wurde von der Firma \fluxron{} übernommen und wird dort weiterentwickelt und in den App Store publiziert.
 
 \subsection{Package-Struktur}
 
@@ -20,7 +20,7 @@ Die Software basiert auf einem Schichtenmodell, bei welchem die Schichten mittel
 \end{figure}
 
 \subsubsection{ch.fluxron.fluxronapp.context}
-Dieses Paket enthält den Applikationskontext. Dieser wird beim Starten der Applikation initialisiert und beinhaltet sowohle den Event Bus für die Kommunikation zwischen Model und User Interface, als auch den Bus zwischen Data und Model. Die Referenzen auf den jeweiligen Event Bus werden über Dependency Injection an die, ebenfalls im Kontext initialisierten, Listenerklassen aus Model und Data weitergegeben.
+Dieses Paket enthält den Applikationskontext. Dieser wird beim Starten der Applikation initialisiert und beinhaltet sowohl den Event Bus für die Kommunikation zwischen Model und User Interface, als auch den Bus zwischen Data und Model. Die Referenzen auf den jeweiligen Event Bus werden über Dependency Injection an die, ebenfalls im Kontext initialisierten, Listenerklassen aus Model und Data weitergegeben.
 
 \subsubsection{ch.fluxron.fluxronapp.ui}
 Beinhaltet alle UI-Klassen. Dies sind Activities, Fragments, Custom Views, Animationen und Listenadapter. Diese Klassen haben alle direkt mit dem User Interface und der Anzeigelogik zu tun.
@@ -53,7 +53,7 @@ Für den Nachrichtenaustausch und die Speicherung der Daten werden noch Datenobj
     \label{abb:instances}
 \end{figure}
 
-Beim Start der Applikation wird der Kontext (FluxronApplication) durch das Betriebssystem  erzeugt. Dieser erstellt dann die beiden Event Bus Objekte und erzeugt auch die Instanzen der Manager- und Datenklassen. Dies ist notwendig, da sich die Layer gegenseitig nicht kennen und nur über einen Event Bus miteinander kommunizieren können. Die Instanzierung aller Manager muss direkt zu Beginn der Applikation gemacht werden, damit sich die Instanzen beim Event Bus registrieren können.
+Beim Start der Applikation wird der Kontext (FluxronApplication) durch das Betriebssystem  erzeugt. Dieser erstellt dann die beiden Event Bus Objekte und erzeugt auch die Instanzen der Manager- und Datenklassen. Dies ist notwendig, da sich die Layer gegenseitig nicht kennen und nur über einen Event Bus miteinander kommunizieren können. Die Instanziierung aller Manager muss direkt zu Beginn der Applikation gemacht werden, damit sich die Instanzen beim Event Bus registrieren können.
 
 Jede Managerklasse hat eine Assoziation mit dem Event Bus (Aufruf des Meldungsversandes) und wird durch diesen aufgrund der Subscription referenziert.
 
@@ -115,7 +115,7 @@ Bei einzelnen Klassen sind Abweichungen vom Durchschnitt festzustellen. Diese la
 
 Hier stechen zwei Metriken besonders hervor. Die hohe Klassenzahl ist durch die Meldungsklassen erklärbar. Da jede Aktion mit einem Command und mindestens einer Response umgesetzt werden muss, ergibt dies eine hohe Klassenzahl. Dies ist allerdings nicht problematisch, sind die Meldungsklassen doch meist nicht mehr als simple Klassen mit ein bis zwei Variablen ohne Logik.
 
-Die hohe Weighted Method Complexity erklärt sich mit der Verwendung des Event Bus. Jeder Meldungstyp muss mit einer Methode abonniert werden. Die Klassen, welche Meldungen verarbeiten erhalten somit viele Methoden. Gerade im Model macht es keinen Sinn, für jede Meldungsklasse eine eigene Abonnentenklasse zu definieren. Diese Manager daher erhalten eine hohe Metrik, sind aber nicht problematisch.
+Die hohe Weighted Method Complexity erklärt sich mit der Verwendung des Event Bus. Jeder Meldungstyp muss mit einer Methode abonniert werden. Die Klassen, welche Meldungen verarbeiten erhalten somit viele Methoden. Gerade im Model macht es keinen Sinn, für jede Meldungsklasse eine eigene Abonnentenklasse zu definieren. Diese Manager haben daher eine hohe Metrik, sind aber nicht problematisch.
 
 \subsubsection{Complexity Metrics}
 
@@ -151,3 +151,5 @@ Hier sind alle Metriken in sehr guten Bereichen. Die Metriken bescheinigen der A
 \end{table}
 
 Hier fällt die Anzahl Klassenabhängigkeiten auf. Diese ist aber mit 4 immer noch auf sehr gutem Niveau.
+
+\pagebreak
