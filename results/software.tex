@@ -43,7 +43,7 @@ Beide Meldungsgruppen basieren auf den Klassen aus \textbf{base}. Diese implemen
 \subsubsection{ch.fluxron.fluxronapp.objectBase}
 Für den Nachrichtenaustausch und die Speicherung der Daten werden noch Datenobjekte benötigt. Diese sind häufig Bestandteil einer Meldung und werden somit von vielen Meldungsklassen referenziert.
 
-\subsubsection{Laufzeitstruktur}
+\subsection{Laufzeitstruktur}
 \begin{figure}[H]
     \begin{center}
     		% GFX Trim left bottom right top
@@ -57,7 +57,7 @@ Beim Start der Applikation wird der Kontext (FluxronApplication) durch das Betri
 
 Jede Managerklasse hat eine Assoziation mit dem Event Bus (Aufruf des Meldungsversandes) und wird durch diesen aufgrund der Subscription referenziert.
 
-\subsubsection{Nachrichtenfluss}
+\subsection{Nachrichtenfluss}
 Nachrichten werden auf mehrere Arten genutzt, um die Verbindung zwischen den Layern herzustellen:
 
 \begin{itemize}
@@ -73,7 +73,7 @@ Nachfolgend ist der Nachrichtenverlauf am Beispiel \enquote{Ändern im Fehlerfal
     		% GFX Trim left bottom right top
         \includegraphics[trim=40 225 30 30,clip,scale=0.55]{results/res/messages}
     \end{center}
-    \caption{Meldungsverlauf beim Ändern von Kücheneinstellungen mit Validierungsfehlern}
+    \caption{Meldungsverlauf \enquote{Ändern von Kücheneinstellungen mit Validierungsfehlern}}
     \label{abb:messages}
 \end{figure}
 
