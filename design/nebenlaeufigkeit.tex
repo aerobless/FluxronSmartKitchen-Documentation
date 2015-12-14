@@ -1,6 +1,6 @@
 \section{Nebenläufigkeitskonzept}
 \label{sec:Nebenläufigkeitskonzept}
-Das Nebenläufigkeitskonzept bezieht sich auf Architektur Variante C \enquote{Event Bus}.
+Das Nebenläufigkeitskonzept bezieht sich auf die Architekturvariante C \enquote{Event Bus}.
 
 \subsection{Sicherstellen der Asynchronität}
 Um sicherzustellen, dass alle Ereignisse asynchron verarbeitet werden, muss der Event Bus so konfiguriert werden, dass er die Meldungsverarbeitung in einem eigenen Thread durchführt. Dies gilt auch für Meldungen die im \ac{UI}-Thread erzeugt werden. So ist sichergestellt, dass der \ac{UI}-Thread nicht blockiert.
@@ -9,7 +9,7 @@ Um sicherzustellen, dass alle Ereignisse asynchron verarbeitet werden, muss der 
 Zugriffe auf das User Interface dürfen nur vom UI-Thread durchgeführt werden. Dazu müssen die Subscriber dem Event Bus den gewünschten Ausführungsthread angeben können.
 
 \subsection{Thread-Safety der Event Bus Subscriber}
-Alle Subscribers müssen sicherstellen (mit Ausnahme UI-Komponenten), dass sie von mehreren Threads aufgerufen werden können. Dazu werden klassische Java Monitors verwendet. Die Subscribers folgen dem "Run-to-completion" Prinzip.
+Alle Subscribers müssen sicherstellen (mit Ausnahme UI-Komponenten), dass sie von mehreren Threads aufgerufen werden können. Dazu werden klassische Java Monitors verwendet. Die Subscriber folgen dem \enquote{Run-to-completion} Prinzip.
 
 \subsection{Restart von Activities}
 Android kann zur Speicheroptimierung laufende Applikationen (im Hintergrund) ganz oder teilweise beenden. Öffnet der Benutzer die Applikation erneut, muss sie ihren Zustand wiederherstellen. Dies erfordert eine Überprüfung, ob die Instanzen im Application Context noch vorhanden sind. Gegebenenfalls müssen die Event Busse neu gestartet werden.
