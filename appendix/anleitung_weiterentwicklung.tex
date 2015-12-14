@@ -1,7 +1,7 @@
 \section{Anleitung Weiterentwicklung}
 \label{anleitung_weiterentwicklung}
 
-Die nachfolgenden Anleitungen dienen dazu der Fluxron Solutions AG die Weiterentwicklung der Applikation zu erleichtern.
+Die nachfolgenden Anleitungen dienen dazu, der Fluxron Solutions AG die Weiterentwicklung der Applikation zu erleichtern.
 
 \subsection{EDS Files aktualisieren}
 Wenn die Fluxron Geräte mit einer neuen Software Version neue Parameter erhalten, muss das \enquote{.eds File} der jeweiligen Geräteklasse aktualisiert werden.
@@ -14,7 +14,7 @@ Um eine neue Geräteklasse hinzuzufügen, muss zuerst das entsprechende \enquote
 
 Für die neue Geräteklasse müssen nun die Layouts der 4 Fragments Status, Usage, Errors und Config erstellt werden. Dazu können die Layouts der bestehenden Geräteklassen kopiert und angepasst werden. Weitere Informationen zum Einbinden von Parametern bietet auch der Abschnitt \ref{sub:parameter_einbinden}.
 
-Zum Schluss muss noch in den Backing-Klassen der Layouts die neue Geräteklasse angezogen werden. Die Backing-Klassen befinden sich unter \code{app/java/ch.fluxron.fluxronapp} \code{/ui/fragments}. In der entsprechenden Klasse muss in der Methode \code{onCreateView} ein zusätzlicher Fall eingebaut werden welcher das neue Layout inflated.
+Zum Schluss muss noch in den Backing-Klassen der Layouts die neue Geräteklasse verwendet werden. Die Backing-Klassen befinden sich unter \code{app/java/ch.fluxron.fluxronapp} \code{/ui/fragments}. In der entsprechenden Klasse muss in der Methode \code{onCreateView} ein zusätzlicher Fall eingebaut werden welcher das neue Layout inflated.
 
 \subsection{Parameter in UI einbinden}
 \label{sub:parameter_einbinden}
@@ -22,10 +22,10 @@ Parameter können in den 4 Fragments (Status, Usage, Errors, Config) der Geräte
 
 Als erstes muss also das entsprechende Fragment Layout geöffnet werden. Darin kann dann ein neues UI Control eingefügt werden. Für veränderbare Parameter sollte \code{ParameterEditable} verwendet werden, unveränderliche Parameter können als \code{ParameterView} oder \code{TemperatureBar} dargestellt werden. Die UI Controls verfügen über ein \enquote{ParamName}-Property, wo der gewünschte Parameter mittels Autocompletion gesetzt werden kann. \code{ParameterEditable} Controls verfügen zudem über ein \enquote{editableAccessLevel}-Property, womit die Sichtbarkeit für die unterschiedlichen AccessLevels der User gesteuert werden kann.
 
-Wenn das neue Control in einer bestehenden Liste von Parametern eingefügt worden ist, dann ist keine weitere Änderung mehr notwendig. Falls das Control ausserhalb eingebaut wurde, muss es in der entsprechenden Backing-Klasse noch angezogen werden. Die Backing-Klassen befinden sich unter \code{app/java/ch.fluxron.fluxronapp/ui/fragments}. In der entsprechenden Klasse muss beim Eintreten eines \code{DeviceChanged} Events die Methode \code{handleDeviceChanged(..)} auf dem Control des Parameters aufgerufen werden. Falls ein AccessLevel gesetzt wurde, muss ausserdem die Methode \code{handleAccessLevel(..)} beim Eintreten eines \code{AccessGranted} Events aufgerufen werden.
+Wenn das neue Control in einer bestehenden Liste von Parametern eingefügt worden ist, dann ist keine weitere Änderung mehr notwendig. Falls das Control ausserhalb eingebaut wurde, muss es in der entsprechenden Backing-Klasse noch angebunden werden. Die Backing-Klassen befinden sich unter \code{app/java/ch.fluxron.fluxronapp/ui/fragments}. In der entsprechenden Klasse muss beim Eintreten eines \code{DeviceChanged} Events die Methode \code{handleDeviceChanged(..)} auf dem Control des Parameters aufgerufen werden. Falls ein AccessLevel gesetzt wurde, muss ausserdem die Methode \code{handleAccessLevel(..)} beim Eintreten eines \code{AccessGranted} Events aufgerufen werden.
 
 \subsection{Neuen Meldungstyp einfügen}
-Um einen neuen Meldungstyp zu erstellen, muss eine neue Klasse im Package \code{} eingefügt werden. Für eine einfache Meldungsklasse ist dies bereits ausreichen. Für Meldungen, welche beantwortet werden sollen, empfiehlt es sich eine \code{RequestResponseConnection} zu verwenden. Diese gibt jeder Meldung eine Verbindungs-Id. Diese kann von anderen Meldungen übernommen werden und damit können Antworten auf eine Meldung vom Absender der ursprünglichen Anfrage eindeutig identifiziert werden.
+Um einen neuen Meldungstyp zu erstellen, muss eine neue Klasse im Package \code{ch.fluxron .fluxronapp.events} eingefügt werden. Für eine einfache Meldungsklasse ist dies bereits ausreichend. Für Meldungen, welche beantwortet werden sollen, empfiehlt es sich eine \code{RequestResponseConnection} zu verwenden. Diese gibt jeder Meldung eine Verbindungs-Id. Diese kann von anderen Meldungen übernommen werden. Damit können Antworten auf eine Meldung vom Absender der ursprünglichen Anfrage eindeutig identifiziert werden.
 
 \begin{figure}[H]
 \begin{lstlisting}
@@ -36,7 +36,7 @@ public class DownloadNewsChannelCommand extends RequestResponseConnection {
     private String newsChannelUrl;
 
     /**
-     * New device deletion request
+     * New download
      * @param newsChannelUrl Id of the kitchen
      */
     public DownloadNewsChannelCommand(String newsChannelUrl) {
@@ -45,7 +45,7 @@ public class DownloadNewsChannelCommand extends RequestResponseConnection {
 
     /**
      * Returns the url of the Channel
-     * @return Url of the kitchen
+     * @return Url of the chennel
      */
     public String getNewsChannelUrl() {
         return newsChannelUrl;
@@ -68,12 +68,12 @@ public class NewsDownloadManager {
   private IEventBusProvider provider;
 
   /**
-   * Creates a new object creation manager
+   * Creates a new news manager
    * @param provider Provider
    */
   public NewsDownloadManager(IEventBusProvider provider) {
       this.provider = provider;
-      provider.getDalEventBus().register(this);
+      provider.getUiEventBus().register(this);
   }
   
    /**
