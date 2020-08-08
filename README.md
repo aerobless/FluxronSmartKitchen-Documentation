@@ -29,4 +29,4 @@ der Status der Geräte wird regelmässig aktualisiert. Der Funktionsumfang wurde
 einem erfolgreichen Praxistest vor Ort überprüft. Die Servicetechniker profitieren nun
 von einer modernen Applikation, welche ihnen den Wartungsalltag erleichtert.
 
-##[Download Full PDF](https://github.com/aerobless/FluxronSmartKitchen-Documentation/raw/master/FluxronSmartKitchen.pdf)
+## [Download Full PDF](https://github.com/aerobless/FluxronSmartKitchen-Documentation/raw/master/FluxronSmartKitchen.pdf)
